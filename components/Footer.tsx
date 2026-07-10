@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Input } from "./Input";
 import Button from "./Button";
@@ -172,7 +171,7 @@ export default function Footer() {
                   href="/#services"
                   className="hover:text-white transition-colors"
                 >
-                  Secure Storage
+                  Secure Warehousing
                 </a>
               </li>
               <li>
@@ -248,18 +247,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#help" className="hover:text-white transition-colors">
-                  Help Center
+                <a href="/faq" className="hover:text-white transition-colors">
+                  FAQ
                 </a>
               </li>
               <li>
-                <a href="#track" className="hover:text-white transition-colors">
-                  Track Shipment
+                <a href="/contact" className="hover:text-white transition-colors">
+                  Contact Us
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-white transition-colors">
-                  FAQs
+                <a href="/prohibited-items" className="hover:text-white transition-colors">
+                  Prohibited Items
                 </a>
               </li>
             </ul>
@@ -268,26 +267,29 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-0 pt-8 relative z-10 flex flex-col md:flex-row justify-between gap-6 text-xs text-gray-400">
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-green-800 relative z-10 flex flex-col md:flex-row justify-between gap-6 text-xs text-gray-400">
         <p>
-          © {new Date().getFullYear()} Kassongo Express. All rights reserved.
+          © {new Date().getFullYear()} Kassongo Express LLC. All rights reserved.
         </p>
 
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <a href="#privacy" className="hover:text-white transition-colors">
-            Privacy
+          <a href="/privacy-policy" className="hover:text-white transition-colors">
+            Privacy Policy
           </a>
-          <a href="#terms" className="hover:text-white transition-colors">
-            Terms
+          <a href="/terms-and-conditions" className="hover:text-white transition-colors">
+            Terms & Conditions
           </a>
-          <a href="#shipping" className="hover:text-white transition-colors">
-            Shipping Policy
+          <a href="/prohibited-items" className="hover:text-white transition-colors">
+            Prohibited Items
+          </a>
+          <a href="/faq" className="hover:text-white transition-colors">
+            FAQs
           </a>
         </div>
       </div>
 
       {/* Giant branding text */}
-      <div className="mx-auto pt-5 relative z-10">
+      <div className="mx-auto pt-5 relative z-0">
         <div className="w-full text-center flex flex-col items-center leading-[0.85]">
           <span className="font-display font-black text-[10vw] md:text-[6vw] lg:text-[12vw] tracking-tighter uppercase text-green-700">
             Kassongo
