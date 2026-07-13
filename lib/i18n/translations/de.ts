@@ -302,7 +302,156 @@ export const de = {
       q15: {
         q: "Sind meine Daten sicher?",
         a: "Wir schuetzen Ihre Daten nach aktuellen SSL-Sicherheitsstandards. Details entnehmen Sie bitte unserer Datenschutzerklaerung."
+      },
+      q16: {
+        q: "Muss ich mindestens 18 Jahre alt sein, um Kassongo Express zu nutzen?",
+        a: "Ja, Sie muessen mindestens 18 Jahre alt sein, um ein Konto zu erstellen und unsere Dienste zu nutzen. Zu Verifizierungszwecken benoetigen wir einen gueltigen amtlichen Lichtbildausweis."
+      },
+      q17: {
+        q: "Welche Unterlagen muss ich einreichen?",
+        a: "Sie muessen zwei gueltige amtliche Ausweise (Reisepass, Fuehrerschein, Personalausweis) vorlegen und unser Registrierungsformular mit korrekten Versandinformationen ausfuellen. Fuer Sendungen mit hohem Wert oder Zollzwecke koennen zusaetzliche Unterlagen erforderlich sein."
+      },
+      q18: {
+        q: "Wie viele Pakete kann ich an meine Kassongo-Adresse senden?",
+        a: "Die Anzahl der Pakete, die Sie an Ihre Kassongo-Adressen senden koennen, ist unbegrenzt. Beachten Sie jedoch unsere Lagerfristen: Pakete muessen innerhalb von 90 Tagen nach Eingang versandt werden, um Verwertungsgebuehren zu vermeiden."
+      },
+      q19: {
+        q: "Kann ich Pakete ueber Kassongo an einen anderen Spediteur weiterleiten?",
+        a: "Nein, Kassongo Express versendet keine Pakete an andere Speditions- oder Weiterleitungsunternehmen. Diese Richtlinie dient der Aufrechterhaltung von Sicherheit und Servicequalitaet."
+      },
+      q20: {
+        q: "Fallen Lagergebuehren an?",
+        a: "Ja, nach einer Karenzzeit je nach Mitgliedschaftsstufe fallen Lagergebuehren an: Kostenloser Tarif (7 Tage), Gold-Mitglied (30 Tage), Platinum-Mitglied (45 Tage). Pakete muessen innerhalb von 90 Tagen nach Eingang versandt werden, sonst gelten sie als aufgegeben."
+      },
+      q21: {
+        q: "Welche Zahlungsmethoden akzeptieren Sie?",
+        a: "Wir akzeptieren grosse Kreditkarten (Visa, Mastercard, American Express), Debitkarten, PayPal und Bankueberweisungen. Alle Zahlungen muessen von einem Konto im selben Namen wie Ihr Kassongo-Konto erfolgen."
+      },
+      q22: {
+        q: "Berechnen Sie Gebuehren fuer die Paketkonsolidierung?",
+        a: "Die Konsolidierungsgebuehren variieren je nach Mitgliedschaftsstufe. Kunden des kostenlosen Tarifs zahlen pro Konsolidierung, Gold-Mitglieder erhalten ermaesstigte Saetze, und Platinum-Mitglieder geniessen kostenlose unbegrenzte Konsolidierung."
+      },
+      q23: {
+        q: "Gibt es versteckte Gebuehren?",
+        a: "Keine versteckten Gebuehren! Wir sind transparent bei allen Kosten. Sie sehen Versandkosten, Konsolidierungsgebuehren (falls zutreffend), Lagergebuehren (falls zutreffend) und eventuelle Traegerzuschlaege, bevor Sie Ihren Versand bestaetigen. Beachten Sie, dass Zollabgaben und Steuern im Zielland Ihre Verantwortung sind."
+      },
+      q24: {
+        q: "Wie lange dauert die Konsolidierung?",
+        a: "Die Standardkonsolidierung dauert 1-3 Werktage, sobald alle Pakete Ihrer Konsolidierungsanfrage in unserem Lager eingegangen sind. Platinum-Mitglieder erhalten eine prioritaere Konsolidierung, die in der Regel innerhalb von 24 Stunden abgeschlossen ist."
+      },
+      q25: {
+        q: "Kann ich einen Artikel aus einer laufenden Konsolidierung entfernen?",
+        a: "Ja, aber es fallen zusaetzliche Gebuehren an und die Bearbeitungszeit verlaengert sich. Es ist am besten, Ihre Konsolidierungsanfrage sorgfaeltig zu pruefen, bevor Sie sie absenden."
+      },
+      q26: {
+        q: "Ist Kassongo haftbar, wenn Artikel waehrend der Konsolidierung verloren gehen?",
+        a: "Kassongo haftet nicht fuer fehlende Inhalte ohne Nachweis dessen, was tatsaechlich in unserem Lager eingegangen ist. Wir empfehlen, Fotos Ihrer Artikel Ihrer Versandanfrage fuer die Dokumentation beizufuegen."
+      },
+      q27: {
+        q: "Koennen uebergrosse Artikel konsolidiert werden?",
+        a: "Uebergrosse und palettierte Pakete koennen nicht mit Standardpaketen konsolidiert werden. Diese Artikel muessen separat versandt werden. Kontaktieren Sie unser Support-Team fuer die Sonderbehandlung von uebergrosser Fracht."
+      },
+      q28: {
+        q: "Wie deklariere ich den Wert eines Pakets?",
+        a: "Sie muessen eine korrekte Handelsrechnung mit detaillierter Beschreibung und Wert des Inhalts fuer jedes Paket vorlegen. Die Angabe falscher Werte kann zu Zollverzoegerungen, Strafen oder der Beschlagnahme des Pakets fuehren. Es liegt in Ihrer Verantwortung, korrekte Informationen bereitzustellen."
+      },
+      q29: {
+        q: "Was passiert, wenn mein Paket vom Zoll beschlagnahmt wird?",
+        a: "Kassongo Express ist nicht verantwortlich fuer Pakete, die vom Zoll aufgrund verbotener Artikel, falscher Unterlagen oder Nichteinhaltung von Einfuhrbestimmungen beschlagnahmt oder zurueckgesandt werden. Sie bleiben fuer alle Gebuehren haftbar, und fuer vom Zoll abgelehnte Pakete werden keine Erstattungen gewaehrt."
+      },
+      q30: {
+        q: "Benoetige ich spezielle Unterlagen fuer Sendungen mit hohem Wert?",
+        a: "Ja, fuer Pakete mit einem gesamten deklarierten Wert von 2.500 USD oder mehr sind Sie fuer die Vervollstaendigung der AES-Dokumentation (Automated Export System) verantwortlich. Kassongo stellt diese Unterlagen oder Steuer-ID-Nummern nicht zur Verfuegung."
+      },
+      q31: {
+        q: "Kann Kassongo bei der Zollabfertigung helfen?",
+        a: "Ja, mit Ihrer Registrierung bei Kassongo ernennen Sie uns zu Ihrem Vertreter fuer die Zollabfertigung, die Vorbereitung von Versandunterlagen und Ursprungszeugnisse. Sie bleiben jedoch fuer die Bereitstellung korrekter Informationen und die Einhaltung aller Vorschriften verantwortlich."
+      },
+      q32: {
+        q: "Kann ich Parfuem oder Kosmetika versenden?",
+        a: "Parfuems und Kosmetika, die Alkohol oder brennbare Stoffe enthalten, sind eingeschraenkt und koennen zusaetzliche Gefahrgutgebuehren vom Traeger verursachen. Einige Parfuems sind je nach Zielort und Traeger moeglicherweise nicht versandfaehig. Kontaktieren Sie uns vor dem Versand solcher Artikel."
+      },
+      q33: {
+        q: "Kann ich Elektronik und Batterien versenden?",
+        a: "Elektronik ist im Allgemeinen erlaubt, aber Lithiumbatterien unterliegen Einschraenkungen. Artikel mit eingebauten Batterien sind in der Regel in Ordnung, aber lose Lithiumbatterien koennen eine Sonderbehandlung erfordern oder bei bestimmten Traegern verboten sein. Deklarieren Sie Elektronik immer genau."
+      },
+      q34: {
+        q: "Was passiert, wenn ich verbotene Artikel versende?",
+        a: "Pakete, die verbotene Artikel enthalten, werden abgelehnt, an den Absender zurueckgesandt, von den Behoerden beschlagnahmt oder nach Ermessen von Kassongo entsorgt. Sie bleiben fuer alle damit verbundenen Kosten haftbar, und Ihr Konto kann gekuendigt werden."
+      },
+      q35: {
+        q: "Wie lange dauert der Versand?",
+        a: "Die Lieferzeiten variieren je nach Traeger und Zielort: Wirtschaftlicher Versand (10-25 Werktage), Standardversand (5-10 Werktage), Expressversand (2-5 Werktage). Beachten Sie, dass die Zollabfertigung zusaetzliche Zeit in Anspruch nehmen kann."
+      },
+      q36: {
+        q: "In welche Laender versenden Sie?",
+        a: "Wir versenden in die meisten Laender weltweit, ausgenommen eingeschraenkte Ziele wie: Kuba, Iran, Nordkorea, Syrien, Russland, Weissrussland und andere, die internationalen Sanktionen unterliegen. Siehe unsere Allgemeinen Geschaeftsbedingungen fuer die vollstaendige Liste."
+      },
+      q37: {
+        q: "Was ist, wenn mein Paket verzoegert oder verloren geht?",
+        a: "Kontaktieren Sie uns sofort, wenn Ihr Paket ueber das geschaetzte Lieferfenster hinaus verzoegert ist. Fuer verlorene Pakete muessen Ansprueche innerhalb von 30 Tagen nach dem Versanddatum geltend gemacht werden. Wir arbeiten mit dem Traeger zusammen, um Ihr Paket zu finden oder Ihren Versicherungsanspruch zu bearbeiten."
+      },
+      q38: {
+        q: "Kann ich die Lieferadresse aendern, nachdem ich meine Anfrage abgesendet habe?",
+        a: "Adressaenderungen sind moeglicherweise moeglich, bevor das Paket unser Lager verlaesst. Kontaktieren Sie uns sofort, wenn Sie die Zieladresse aendern muessen. Sobald das Paket an den Traeger uebergeben wurde, muessen Adressaenderungen direkt mit dem Traeger vereinbart werden."
+      },
+      q39: {
+        q: "Wie reiche ich einen Anspruch fuer ein verlorenes oder beschaedigtes Paket ein?",
+        a: "Verlorene Pakete: Reichen Sie einen Anspruch innerhalb von 30 Tagen nach dem Versanddatum ein. Beschaedigte Pakete: Melden Sie Schaeden innerhalb von 10 Tagen nach Lieferung. Sie muessen einen Wertnachweis (Rechnung oder Beleg) und Fotos der Schaeden vorlegen. Ansprueche werden innerhalb von 30 Tagen bearbeitet."
+      },
+      q40: {
+        q: "Worauf basiert die Auszahlung von Anspruechen?",
+        a: "Ansprueche werden zum niedrigeren Betrag entweder des deklarierten Zollwerts oder des tatsaechlichen Kaufpreises auf Ihrer Rechnung ausgezahlt. Sie muessen einen Wertnachweis vorlegen. Auszahlungen unter 25 USD werden als Kontoguthaben ausgegeben."
+      },
+      q41: {
+        q: "Was ist, wenn Kassongo mein Paket waehrend der Konsolidierung beschaedigt?",
+        a: "Kassongo haftet nicht fuer Schaeden an Artikeln, die vom Hersteller vorbepackt wurden. Wenn Schaeden waehrend unseres Konsolidierungsprozesses aufgetreten sind, reichen Sie einen Anspruch mit unterstuetzenden Beweisen ein. Wir pruefen und bearbeiten berechtigte Ansprueche."
+      },
+      q42: {
+        q: "Fallen Gebuehren fuer die Einreichung von Anspruechen an?",
+        a: "Ja, es faellt eine Bearbeitungsgebuehr fuer von Kassongo Express verwaltete Ansprueche an. Falsche Ansprueche werden mit mindestens 5,00 USD fuer Untersuchungskosten belastet."
+      },
+      q43: {
+        q: "Was ist, wenn ich einen unbefugten Kontozugriff vermute?",
+        a: "Kontaktieren Sie uns sofort, wenn Sie einen unbefugten Zugriff auf Ihr Konto vermuten. Aendern Sie sofort Ihr Passwort. Bis Sie uns schriftlich ueber einen Sicherheitsversto informieren, bleiben Sie fuer jede unbefugte Nutzung Ihres Kontos haftbar."
+      },
+      q44: {
+        q: "Warum muss ich eine Identitaetspruefung durchfuehren?",
+        a: "Die Identitaetspruefung ist erforderlich, um Anti-Terrorismus-Vorschriften einzuhalten, Betrug zu verhindern und die Sicherheit des internationalen Versands zu gewaehrleisten. Wir koennen zusaetzliche Unterlagen anfordern, wenn wir Kontodiskrepanzen feststellen."
+      },
+      q45: {
+        q: "Kann ich mehrere Konten haben?",
+        a: "Nein, doppelte Konten sind nicht erlaubt. Dazu gehoert auch die Erstellung mehrerer Konten, die mit derselben Zahlungsmethode bezahlt werden. Die Verletzung dieser Richtlinie kann zur Kuendigung des Kontos fuehren."
+      },
+      q46: {
+        q: "Wie kuendige ich meine Mitgliedschaft?",
+        a: "Sie koennen Ihre Mitgliedschaft jederzeit ueber Ihr Kontodashboard kuendigen. Mitgliedschaften enden am naechsten Verlaengerungsdatum ohne Rueckwirkung. Fuer die vorzeitige Kuendigung monatlicher Abonnements werden keine Erstattungen gewaehrt."
+      },
+      q47: {
+        q: "Was passiert mit meinen Paketen, wenn ich kuendige?",
+        a: "Nach der Kuendigung behaelt sich Kassongo das Recht vor, Standardsaetze fuer Pakete zu berechnen, die weiterhin unter Ihrem Namen eingehen. Pakete koennen an den Absender zurueckgesandt oder entsorgt werden. Stellen Sie sicher, dass alle Pakete vor der Kuendigung versandt werden."
+      },
+      q48: {
+        q: "Kann Kassongo mein Konto kuendigen?",
+        a: "Ja, Kassongo kann Ihr Konto nach eigenem Ermessen sofort kuendigen, wenn Ihr Verhalten nicht mit unseren Allgemeinen Geschaeftsbedingungen uebereinstimmt, einschliesslich der Angabe falscher Informationen, des Versands verbotener Artikel oder der Verletzung unserer Richtlinien."
+      },
+      q49: {
+        q: "Ich habe das falsche Paket erhalten. Was soll ich tun?",
+        a: "Kontaktieren Sie uns sofort mit Details und Fotos. Wenn bestaetigt wird, dass Sie ein falsches Paket erhalten haben, erstattet Kassongo die Versandkosten fuer die Weiterleitung an den richtigen Empfaenger. Sie sind verpflichtet, tatsaechliche Informationen ueber das Erhaltene zu melden."
+      },
+      q50: {
+        q: "Mein Paket ist noch nicht im Lager angekommen. Was soll ich tun?",
+        a: "Ueberpruefen Sie die Sendungsverfolgungsnummer des urspruenglichen Haendlers. Wenn der Traeger eine Lieferung an unser Lager anzeigt, es aber nach 48 Stunden nicht in Ihrem Konto erscheint, kontaktieren Sie uns mit der Sendungsnummer und wir werden untersuchen."
+      },
+      q51: {
+        q: "Kann ich ein Paket ablehnen oder zuruecksenden?",
+        a: "Wenn ein Paket nicht geoefnet wurde, koennen Sie eine Ruecksendung an den Absender beantragen. Ruecksendegebuehren fallen an und liegen in Ihrer Verantwortung. Sobald die Konsolidierung beginnt oder ein Paket versandt wurde, sind Ruecksendungen nicht mehr moeglich."
+      },
+      q52: {
+        q: "Der deklarierte Wert auf meinem Paket ist falsch. Kann ich ihn aendern?",
+        a: "Sie muessen Werte vor dem Versand korrekt deklarieren. Kontaktieren Sie uns sofort, wenn Sie einen Fehler gemacht haben. Sobald ein Paket versandt wurde, koennen Wertdeklarationen nicht mehr geaendert werden."
       }
+
     },
     list: {
       questionsCount: "Fragen",

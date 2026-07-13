@@ -329,6 +329,154 @@ export const en = {
       q15: {
         q: "How is my personal information protected?",
         a: "We use industry-standard encryption and security measures to protect your personal and payment information. We never share your data with third parties except as required for shipping and customs purposes. See our Privacy Policy for details."
+      },
+      q16: {
+        q: "Do I need to be 18+ to use Kassongo Express?",
+        a: "Yes, you must be at least 18 years old to create an account and use our services. We require valid government-issued ID for verification purposes."
+      },
+      q17: {
+        q: "What documents do I need to provide?",
+        a: "You'll need to provide two forms of valid government-issued identification (passport, driver's license, national ID card) and complete our registration form with accurate shipping information. Additional documentation may be required for high-value shipments or customs purposes."
+      },
+      q18: {
+        q: "How many packages can I send to my Kassongo address?",
+        a: "There's no limit to the number of packages you can send to your Kassongo addresses. However, keep in mind our storage periods: packages must be shipped out within 90 days of receipt to avoid abandonment fees."
+      },
+      q19: {
+        q: "Can I ship to another freight forwarder using Kassongo?",
+        a: "No, Kassongo Express does not ship packages to other freight forwarding or reshipping companies. This policy helps us maintain security and service quality."
+      },
+      q20: {
+        q: "Are there storage fees?",
+        a: "Yes, storage fees apply after a grace period based on your membership level: Free Plan (7 days), Gold Member (30 days), Platinum Member (45 days). Packages must be shipped within 90 days of receipt or they will be considered abandoned."
+      },
+      q21: {
+        q: "What payment methods do you accept?",
+        a: "We accept major credit cards (Visa, Mastercard, American Express), debit cards, PayPal, and bank transfers. All payments must be made from an account in the same name as your Kassongo account for security purposes."
+      },
+      q22: {
+        q: "Do you charge for package consolidation?",
+        a: "Consolidation fees vary by membership level. Free Plan customers pay per consolidation, Gold Members receive discounted rates, and Platinum Members enjoy free unlimited consolidation."
+      },
+      q23: {
+        q: "Are there any hidden fees?",
+        a: "No hidden fees! We're transparent about all costs. You'll see shipping charges, consolidation fees (if applicable), storage fees (if applicable), and any carrier surcharges before you confirm your shipment. Note that customs duties and taxes in your destination country are your responsibility."
+      },
+      q24: {
+        q: "How long does consolidation take?",
+        a: "Standard consolidation takes 1-3 business days once all packages in your consolidation request have arrived at our warehouse. Platinum members receive priority consolidation, typically completed within 24 hours."
+      },
+      q25: {
+        q: "Can I remove an item from a consolidation after it's started?",
+        a: "Yes, but additional fees apply and processing time will increase. It's best to finalize your consolidation request carefully before submitting it."
+      },
+      q26: {
+        q: "Is Kassongo responsible if items go missing during consolidation?",
+        a: "Kassongo is not responsible for missing contents without proof of what was actually received at our warehouse. We recommend adding photos of your items to your shipment request for documentation."
+      },
+      q27: {
+        q: "Can oversized items be consolidated?",
+        a: "Oversized and palletized packages cannot be consolidated with standard packages. These items must be shipped separately. Contact our support team for special handling of oversized freight."
+      },
+      q28: {
+        q: "How do I declare package value?",
+        a: "You must provide an accurate commercial invoice detailing the description and value of contents for each package. Declaring incorrect values can result in customs delays, penalties, or package seizure. It's your responsibility to provide accurate information."
+      },
+      q29: {
+        q: "What happens if my package is seized by customs?",
+        a: "Kassongo Express is not responsible for packages seized or returned by customs due to prohibited items, incorrect documentation, or failure to comply with import regulations. You remain liable for all fees, and no refunds are provided for packages rejected by customs."
+      },
+      q30: {
+        q: "Do I need special documentation for high-value shipments?",
+        a: "Yes, for packages with a total declared value of $2,500 USD or more, you are responsible for completing AES (Automated Export System) documentation. Kassongo does not provide this paperwork or TAX ID numbers."
+      },
+      q31: {
+        q: "Can Kassongo help with customs clearance?",
+        a: "Yes, by registering with Kassongo, you appoint us as your agent for customs clearance, preparation of shipping documents, and certificates of origin. However, you remain responsible for providing accurate information and complying with all regulations."
+      },
+      q32: {
+        q: "Can I ship perfume or cosmetics?",
+        a: "Perfumes and cosmetics containing alcohol or flammable substances are restricted and may incur additional hazmat fees from carriers. Some perfumes may not be shippable depending on the destination and carrier. Contact us before shipping such items."
+      },
+      q33: {
+        q: "Can I ship electronics and batteries?",
+        a: "Electronics are generally allowed, but lithium batteries have restrictions. Items with built-in batteries are usually fine, but loose lithium batteries may require special handling or be prohibited on certain carriers. Always declare electronics accurately."
+      },
+      q34: {
+        q: "What happens if I ship prohibited items?",
+        a: "Packages containing prohibited items will be refused, returned to sender, confiscated by authorities, or disposed of at Kassongo's discretion. You remain liable for all associated costs, and your account may be terminated."
+      },
+      q35: {
+        q: "How long does shipping take?",
+        a: "Delivery times vary by carrier and destination: Economy shipping (10-25 business days), Standard shipping (5-10 business days), Express shipping (2-5 business days). Note that customs clearance can add additional time."
+      },
+      q36: {
+        q: "Which countries do you ship to?",
+        a: "We ship to most countries worldwide except for restricted destinations including: Cuba, Iran, North Korea, Syria, Russia, Belarus, and others subject to international sanctions. See our Terms & Conditions for the complete list."
+      },
+      q37: {
+        q: "What if my package is delayed or lost?",
+        a: "Contact us immediately if your package is delayed beyond the estimated delivery window. For lost packages, claims must be filed within 30 days of the shipment date. We'll work with the carrier to locate your package or process your insurance claim."
+      },
+      q38: {
+        q: "Can I change the shipping address after submitting my request?",
+        a: "Address changes may be possible before the package ships from our warehouse. Contact us immediately if you need to change the destination address. Once the package is handed to the carrier, address changes must be arranged directly with the carrier."
+      },
+      q39: {
+        q: "How do I file a claim for a lost or damaged package?",
+        a: "Lost packages: File a claim within 30 days of shipment date. Damaged packages: Report damage within 10 days of delivery. You'll need to provide proof of value (invoice or receipt) and photos of damage. Claims are processed within 30 days."
+      },
+      q40: {
+        q: "What is the claims payout based on?",
+        a: "Claims are paid at the lower of either the declared customs value or the actual purchase price shown on your invoice. You must provide proof of value. Payouts under $25 are issued as account credits."
+      },
+      q41: {
+        q: "What if Kassongo damages my package during consolidation?",
+        a: "Kassongo is not liable for damages to items that were pre-packaged by manufacturers. If damage occurred during our consolidation process, file a claim with supporting evidence. We'll review and process legitimate claims."
+      },
+      q42: {
+        q: "Are there fees for filing claims?",
+        a: "Yes, there is a processing fee for claims administered by Kassongo Express. False claims will be charged a minimum of $5.00 to cover investigation expenses."
+      },
+      q43: {
+        q: "What if I suspect unauthorized account access?",
+        a: "Contact us immediately if you suspect unauthorized access to your account. Change your password right away. Until you notify us in writing of a security breach, you remain liable for any unauthorized use of your account."
+      },
+      q44: {
+        q: "Why do I need to provide ID verification?",
+        a: "ID verification is required to comply with anti-terrorism regulations, prevent fraud, and ensure the security of international shipping. We may request additional documentation if we detect account discrepancies."
+      },
+      q45: {
+        q: "Can I have multiple accounts?",
+        a: "No, duplicate accounts are not allowed. This includes creating multiple accounts paid from the same payment method. Violation of this policy may result in account termination."
+      },
+      q46: {
+        q: "How do I cancel my membership?",
+        a: "You can cancel your membership anytime through your account dashboard. Memberships end on the next renewal date with no backdating. No refunds are provided for early cancellation of monthly subscriptions."
+      },
+      q47: {
+        q: "What happens to my packages if I cancel?",
+        a: "After cancellation, Kassongo reserves the right to charge standard rates for packages that continue to arrive under your name. Packages may be returned to sender or disposed of. Make sure to ship out all packages before canceling."
+      },
+      q48: {
+        q: "Can Kassongo terminate my account?",
+        a: "Yes, Kassongo may terminate your account immediately at our discretion if your conduct fails to conform with our Terms and Conditions, including providing false information, shipping prohibited items, or violating our policies."
+      },
+      q49: {
+        q: "I received the wrong package. What should I do?",
+        a: "Contact us immediately with details and photos. If it's verified that you received an incorrect package, Kassongo will reimburse shipping costs to forward it to the correct recipient. You're obligated to report factual information about what was received."
+      },
+      q50: {
+        q: "My package hasn't arrived at the warehouse yet. What should I do?",
+        a: "Check the tracking number provided by the original retailer. If the carrier shows delivery to our warehouse but it's not in your account after 48 hours, contact us with the tracking number and we'll investigate."
+      },
+      q51: {
+        q: "Can I refuse or return a package?",
+        a: "If a package hasn't been opened, you may request a return to sender. Return shipping fees apply and are your responsibility. Once consolidation begins or a package is shipped out, returns are not possible."
+      },
+      q52: {
+        q: "The declared value on my package is incorrect. Can I change it?",
+        a: "You must declare values accurately before shipping. Contact us immediately if you made an error. Once a package ships, value declarations cannot be changed."
       }
     },
     list: {

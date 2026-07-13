@@ -59,20 +59,20 @@ export default function Home() {
 
       {/* Main Container */}
       <main role="main" className="max-w-screen overflow-x-clip pt-16" id="main">
-        
+
         {/* 1. Hero Section - Rebranded */}
         <section className="relative bg-white py-12 px-6 md:py-16 lg:py-20 overflow-hidden">
-          
+
           {/* Background decoration */}
           <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-yellow-50 opacity-60"></div>
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-900/5 to-transparent"></div>
-          
+
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              
+
               {/* Left Column - Content */}
               <div className="space-y-8">
-                
+
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 bg-green-900 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide shadow-soft">
                   <Zap className="w-3 h-3 text-yellow-400" />
@@ -93,18 +93,18 @@ export default function Home() {
 
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    variant="primary" 
-                    size="lg" 
+                  <Button
+                    variant="primary"
+                    size="lg"
                     href="#get-address"
                     className="shadow-soft-lg hover:shadow-soft-xl transition-all"
                   >
                     <PackageIcon className="w-5 h-5" />
                     {t("home.hero.btnAddress")}
                   </Button>
-                  <Button 
-                    variant="secondary" 
-                    size="lg" 
+                  <Button
+                    variant="secondary"
+                    size="lg"
                     href="/contact"
                     className="shadow-soft hover:shadow-soft-md transition-all"
                   >
@@ -149,20 +149,24 @@ export default function Home() {
 
               {/* Right Column - Visual */}
               <div className="relative">
-                
-                {/* Main Image Card */}
-                <div className="relative bg-white rounded-2xl shadow-soft-xl border border-gray-200 overflow-hidden">
-                  <img
-                    src="/screenshot-1.jpg"
-                    alt="Kassongo Freight Platform"
-                    className="w-full h-auto"
+
+                {/* Main Video Card with Blend Effect */}
+                <div className="relative overflow-hidden">
+                  {/* Gradient overlay for edge blur */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-50/10 via-transparent to-white/10 pointer-events-none z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-green-50/10 pointer-events-none z-10"></div>
+
+                  <video
+                    src="/globepackage.webm"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-auto object-cover opacity-85 blur-[1px] scale-105"
+                    style={{ maskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%)', WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%)' }}
+                    aria-label="Kassongo Freight Platform Animation"
                   />
-                  
-                  {/* Floating Badge on Image */}
-                  <div className="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-xl shadow-soft-lg text-right">
-                    <div className="text-xs font-bold uppercase tracking-wide">{t("common.startingAt")}</div>
-                    <div className="text-2xl font-black">$3.80<span className="text-sm font-semibold">{t("common.kg")}</span></div>
-                  </div>
                 </div>
 
               </div>
@@ -177,17 +181,17 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight mb-16 text-center text-gray-900">
               {t("home.howItWorks.title")}
             </h2>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              
+
               {/* Left: Cheetah World Graphic */}
               <div className="relative flex items-center justify-center">
                 <div className="w-full max-w-md aspect-square relative">
                   {/* Cheetah World Image */}
                   <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <img 
-                      src="/CheetahWorld.png" 
-                      alt={t("home.howItWorks.networkAlt")} 
+                    <img
+                      src="/CheetahWorld.png"
+                      alt={t("home.howItWorks.networkAlt")}
                       className="w-auto h-700 object-contain opacity-80"
                     />
                   </div>
@@ -196,7 +200,7 @@ export default function Home() {
 
               {/* Right: 3-Step Process */}
               <div className="space-y-8">
-                
+
                 {/* Step 1 */}
                 <div className="flex items-start gap-4 group">
                   <div className="flex-shrink-0 w-16 h-16 bg-green-900 rounded-2xl flex items-center justify-center shadow-soft group-hover:shadow-soft-lg transition-all">
@@ -265,7 +269,7 @@ export default function Home() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              
+
               {/* Send Card */}
               <div className="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all border border-gray-200">
                 <div className="w-16 h-16 bg-green-900 rounded-2xl flex items-center justify-center mb-6 shadow-soft">
@@ -350,7 +354,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="bg-white rounded-3xl shadow-soft-xl p-8 md:p-12 border border-gray-200">
               <div className="flex flex-col md:flex-row items-center gap-8">
-                
+
                 {/* Icon */}
                 <div className="flex-shrink-0">
                   <div className="w-24 h-24 bg-gradient-to-br from-green-900 to-green-700 rounded-3xl flex items-center justify-center shadow-soft-lg">
@@ -442,7 +446,7 @@ export default function Home() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              
+
               {/* Card 1 */}
               <div className="bg-gradient-to-b from-[#24963f] to-[#0c4e25] rounded-3xl p-6 flex flex-col justify-between h-[500px] shadow-card hover:shadow-card transition-smooth relative group text-white">
                 <div>
@@ -453,10 +457,10 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex-1 flex items-end justify-center mb-20">
-                  <img 
-                    src="/consolidation.svg" 
-                    alt="Consolidation" 
-                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" 
+                  <img
+                    src="/consolidation.svg"
+                    alt="Consolidation"
+                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                 </div>
                 <div>
@@ -476,10 +480,10 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex-1 flex items-end justify-center mb-20">
-                  <img 
-                    src="/secure_storage.svg" 
-                    alt="Secure Storage" 
-                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" 
+                  <img
+                    src="/secure_storage.svg"
+                    alt="Secure Storage"
+                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                 </div>
                 <div>
@@ -499,10 +503,10 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex-1 flex items-end justify-center mb-20">
-                  <img 
-                    src="/assisted_sourcing.svg" 
-                    alt="Assisted Sourcing" 
-                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" 
+                  <img
+                    src="/assisted_sourcing.svg"
+                    alt="Assisted Sourcing"
+                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                 </div>
                 <div>
@@ -522,10 +526,10 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex-1 flex items-end justify-center mb-20">
-                  <img 
-                    src="/express_forwarding.svg" 
-                    alt="Express Forwarding" 
-                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" 
+                  <img
+                    src="/express_forwarding.svg"
+                    alt="Express Forwarding"
+                    className="w-full h-40 object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                 </div>
                 <div>
@@ -592,16 +596,15 @@ export default function Home() {
         {/* 9. Mailbox & Form Section */}
         <section id="get-address" className="py-20 px-6 md:px-12 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
+
             {/* Gallery Thumbnails */}
             <div className="hidden lg:flex lg:col-span-1 flex-col gap-3">
               {thumbs.map((thumb, index) => (
                 <button
                   key={thumb.title}
                   onClick={() => setActiveThumb(index)}
-                  className={`w-16 h-16 rounded-xl border-2 overflow-hidden shadow-soft hover:shadow-soft-md transition-all ${
-                    activeThumb === index ? "border-green-600" : "border-gray-200"
-                  }`}
+                  className={`w-16 h-16 rounded-xl border-2 overflow-hidden shadow-soft hover:shadow-soft-md transition-all ${activeThumb === index ? "border-green-600" : "border-gray-200"
+                    }`}
                 >
                   <img src={thumb.src} alt={thumb.title} className="w-full h-full object-cover" />
                 </button>
@@ -674,13 +677,12 @@ export default function Home() {
                       <button
                         key={hub}
                         onClick={() => setSelectedHub(hub)}
-                        className={`py-3 px-3 rounded-xl border text-center font-bold uppercase text-xs shadow-soft transition-all hover:shadow-soft-md flex items-center justify-center gap-2 ${
-                          selectedHub === hub ? "bg-green-900 text-white border-green-900" : "bg-white border-gray-200 text-gray-700"
-                        }`}
+                        className={`py-3 px-3 rounded-xl border text-center font-bold uppercase text-xs shadow-soft transition-all hover:shadow-soft-md flex items-center justify-center gap-2 ${selectedHub === hub ? "bg-green-900 text-white border-green-900" : "bg-white border-gray-200 text-gray-700"
+                          }`}
                       >
-                        <span 
-                          className={`fi fi-${flagCode}`} 
-                          style={{ width: "1.25rem", height: "0.9375rem", borderRadius: "3px", display: "inline-block", backgroundSize: "cover", flexShrink: 0 }} 
+                        <span
+                          className={`fi fi-${flagCode}`}
+                          style={{ width: "1.25rem", height: "0.9375rem", borderRadius: "3px", display: "inline-block", backgroundSize: "cover", flexShrink: 0 }}
                         />
                         <span>{label}</span>
                       </button>
@@ -715,13 +717,13 @@ export default function Home() {
         {/* 10. Hype Download Section */}
         <section className="py-20 px-6 md:px-12 lg:px-20 max-w-6xl mx-auto">
           <div className="bg-green-900 text-white rounded-3xl shadow-soft-xl overflow-hidden relative border border-gray-200">
-            
+
             {/* Split layout: content left, airplane graphic right */}
             <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-              
+
               {/* Content area */}
               <div className="lg:col-span-7 p-8 md:p-12 space-y-6 relative z-10">
-                
+
                 {/* Five star checklist */}
                 <div className="flex items-center gap-2">
                   <span className="text-green-400 tracking-tight">★★★★★</span>
@@ -781,9 +783,14 @@ export default function Home() {
               </div>
 
               {/* Graphic area */}
-              <div className="lg:col-span-5 h-80 w-full self-end relative border-t lg:border-t-0 lg:border-l border-gray-700 bg-green-950 overflow-hidden flex items-center justify-center p-6">
-                <div className="absolute inset-0 bg-gradient-to-tr from-green-600/15 to-yellow-400/15 opacity-60"></div>
-                <img src="/screenshot-2.jpg" alt="Cargo Sourcing Transit" className="max-w-[90%] max-h-[90%] object-contain rounded-2xl border border-gray-700 shadow-soft-xl" />
+              <div className="lg:col-span-5 self-end relative overflow-hidden flex items-center">
+                <div className="relative z-10 flex items-center justify-center">
+                  <img
+                    src="/mobilemockup.png"
+                    alt="Kassongo Mobile App"
+                    className="h-130 w-full object-contain drop-shadow-3xl"
+                  />
+                </div>
               </div>
 
             </div>
@@ -849,9 +856,9 @@ export default function Home() {
                 { code: "be", label: "Belgium" },
               ].map((c) => (
                 <div key={c.code} className="flex flex-col items-center gap-2.5">
-                  <span 
-                    className={`fi fi-${c.code} shadow-soft-md`} 
-                    style={{ width: "3rem", height: "2.25rem", borderRadius: "6px", display: "block", backgroundSize: "cover" }} 
+                  <span
+                    className={`fi fi-${c.code} shadow-soft-md`}
+                    style={{ width: "3rem", height: "2.25rem", borderRadius: "6px", display: "block", backgroundSize: "cover" }}
                   />
                   <span className="text-[11px] font-bold uppercase tracking-wider text-white/90">{c.label}</span>
                 </div>
