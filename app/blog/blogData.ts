@@ -92,7 +92,7 @@ export const blogArticles: Record<string, BlogArticle> = {
         readTime: "12 min",
         authorKey: "Thuram Junior",
         authorBioKey: "",
-        image: "/blog/Port-of-Shanghai-China.png",
+        image: "/blog/Port-of-Shanghai-China.webp",
         imageAltKey: "blog.articles.chinacameroon.imageAlt",
         tags: ["blog.tags.china", "blog.tags.cameroon", "blog.tags.africaTrade"],
         content: [
@@ -203,7 +203,7 @@ export const blogArticles: Record<string, BlogArticle> = {
         readTime: "7 min",
         authorKey: "Thuram Junior",
         authorBioKey: "",
-        image: "/blog/container-clock.png",
+        image: "/blog/container-clock.webp",
         imageAltKey: "blog.articles.demurrage.imageAlt",
         tags: ["blog.tags.demurrage", "blog.tags.detention", "blog.tags.fees"],
         content: [
@@ -255,7 +255,7 @@ export const blogArticles: Record<string, BlogArticle> = {
         readTime: "5 min",
         authorKey: "Thuram Junior",
         authorBioKey: "",
-        image: "/blog/custom-check.png",
+        image: "/blog/custom-check.webp",
         imageAltKey: "blog.articles.customsDuties.imageAlt",
         tags: ["blog.tags.customs", "blog.tags.duties", "blog.tags.taxes"],
         content: [
@@ -306,7 +306,7 @@ export const blogArticles: Record<string, BlogArticle> = {
         readTime: "11 min",
         authorKey: "Thuram Junior",
         authorBioKey: "",
-        image: "/blog/shipping-contract.png",
+        image: "/blog/shipping-contract.webp",
         imageAltKey: "blog.articles.incoterms.imageAlt",
         tags: ["blog.tags.incoterms", "blog.tags.tradeTerms", "blog.tags.contracts"],
         content: [
@@ -328,7 +328,7 @@ export const blogArticles: Record<string, BlogArticle> = {
         readTime: "8 min",
         authorKey: "Thuram Junior",
         authorBioKey: "",
-        image: "/blog/ai-warehouse.png",
+        image: "/blog/ai-warehouse.webp",
         imageAltKey: "blog.articles.future.imageAlt",
         tags: ["blog.tags.future", "blog.tags.technology", "blog.tags.ai"],
         content: [
@@ -348,7 +348,7 @@ export const blogArticles: Record<string, BlogArticle> = {
         readTime: "5 min",
         authorKey: "Thuram Junior",
         authorBioKey: "",
-        image: "/blog/fragile-cover.png",
+        image: "/blog/fragile-cover.webp",
         imageAltKey: "blog.articles.fragile.imageAlt",
         tags: ["blog.tags.packaging", "blog.tags.fragile", "blog.tags.protection"],
         content: [
@@ -375,7 +375,7 @@ export const blogArticles: Record<string, BlogArticle> = {
         readTime: "7 min",
         authorKey: "Thuram Junior",
         authorBioKey: "",
-        image: "/blog/cargo-skyline.png",
+        image: "/blog/cargo-skyline.webp",
         imageAltKey: "blog.articles.turkey.imageAlt",
         tags: ["blog.tags.turkey", "blog.tags.istanbul", "blog.tags.tradeHub"],
         content: [
@@ -414,8 +414,8 @@ export const relatedArticlesData: BlogPost[] = [
         categoryKey: "blog.categories.routes",
         date: "2026-07-08",
         readTime: "12 min",
-        heroImage: "/blog/Port-of-Shanghai-China.png",
-        thumbnail: "/blog/Port-of-Shanghai-China.png",
+        heroImage: "/blog/Port-of-Shanghai-China.webp",
+        thumbnail: "/blog/Port-of-Shanghai-China.webp",
         tags: ["blog.tags.china", "blog.tags.cameroon", "blog.tags.africaTrade"],
     },
     {
@@ -447,8 +447,8 @@ export const relatedArticlesData: BlogPost[] = [
         categoryKey: "blog.categories.tips",
         date: "2026-06-28",
         readTime: "7 min",
-        heroImage: "/blog/container-clock.png",
-        thumbnail: "/blog/container-clock.png",
+        heroImage: "/blog/container-clock.webp",
+        thumbnail: "/blog/container-clock.webp",
         tags: ["blog.tags.demurrage", "blog.tags.detention", "blog.tags.fees"],
     },
     {
@@ -469,8 +469,8 @@ export const relatedArticlesData: BlogPost[] = [
         categoryKey: "blog.categories.customs",
         date: "2026-06-20",
         readTime: "5 min",
-        heroImage: "/blog/custom-check.png",
-        thumbnail: "/blog/custom-check.png",
+        heroImage: "/blog/custom-check.webp",
+        thumbnail: "/blog/custom-check.webp",
         tags: ["blog.tags.customs", "blog.tags.duties", "blog.tags.taxes"],
     },
     {
@@ -491,8 +491,8 @@ export const relatedArticlesData: BlogPost[] = [
         categoryKey: "blog.categories.guides",
         date: "2026-06-15",
         readTime: "11 min",
-        heroImage: "/blog/shipping-contract.png",
-        thumbnail: "/blog/shipping-contract.png",
+        heroImage: "/blog/shipping-contract.webp",
+        thumbnail: "/blog/shipping-contract.webp",
         tags: ["blog.tags.incoterms", "blog.tags.tradeTerms"],
     },
     {
@@ -502,8 +502,8 @@ export const relatedArticlesData: BlogPost[] = [
         categoryKey: "blog.categories.industry",
         date: "2026-06-10",
         readTime: "8 min",
-        heroImage: "/blog/ai-warehouse.png",
-        thumbnail: "/blog/ai-warehouse.png",
+        heroImage: "/blog/ai-warehouse.webp",
+        thumbnail: "/blog/ai-warehouse.webp",
         tags: ["blog.tags.future", "blog.tags.technology", "blog.tags.ai"],
     },
     {
@@ -513,8 +513,8 @@ export const relatedArticlesData: BlogPost[] = [
         categoryKey: "blog.categories.tips",
         date: "2026-06-05",
         readTime: "5 min",
-        heroImage: "/blog/fragile-cover.png",
-        thumbnail: "/blog/fragile-cover.png",
+        heroImage: "/blog/fragile-cover.webp",
+        thumbnail: "/blog/fragile-cover.webp",
         tags: ["blog.tags.packaging", "blog.tags.fragile", "blog.tags.protection"],
     },
     {
@@ -524,8 +524,8 @@ export const relatedArticlesData: BlogPost[] = [
         categoryKey: "blog.categories.routes",
         date: "2026-06-01",
         readTime: "7 min",
-        heroImage: "/blog/cargo-skyline.png",
-        thumbnail: "/blog/cargo-skyline.png",
+        heroImage: "/blog/cargo-skyline.webp",
+        thumbnail: "/blog/cargo-skyline.webp",
         tags: ["blog.tags.turkey", "blog.tags.istanbul", "blog.tags.tradeHub"],
     },
 ];

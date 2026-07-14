@@ -149,7 +149,7 @@ export default function AboutPage() {
                             <div className="relative">
                                 <div className="relative overflow-hidden opacity-90">
                                     <img
-                                        src="/about-hero.png"
+                                        src="/about-hero.webp"
                                         alt={t("about.hero.imageAlt")}
                                         className="w-full h-auto object-cover"
                                         style={{

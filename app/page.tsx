@@ -229,7 +229,7 @@ export default function Home() {
                   {/* Cheetah World Image */}
                   <div className="absolute inset-0 flex items-center justify-center p-8">
                     <img
-                      src="/CheetahWorld.png"
+                      src="/CheetahWorld.webp"
                       alt={t("home.howItWorks.networkAlt")}
                       className="w-auto h-700 object-contain opacity-80"
                     />
@@ -476,7 +476,7 @@ export default function Home() {
                   {/* AliExpress */}
                   <div className="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100">
                     <img
-                      src="/aliexpress-logo-5a8f.png"
+                      src="/aliexpress-logo-5a8f.webp"
                       alt="AliExpress"
                       style={{ height: "100px", width: "auto" }}
                       className="object-contain"
@@ -503,7 +503,7 @@ export default function Home() {
                   {/* 1688 */}
                   <div className="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100">
                     <img
-                      src="/1688.png"
+                      src="/1688.webp"
                       alt="1688"
                       style={{ height: "32px", width: "auto" }}
                       className="object-contain"
@@ -521,7 +521,7 @@ export default function Home() {
                   {/* Jumia */}
                   <div className="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100">
                     <img
-                      src="/Jumia-Logo-2012.png"
+                      src="/Jumia-Logo-2012.webp"
                       alt="Jumia"
                       style={{ height: "50px", width: "auto" }}
                       className="object-contain"
@@ -994,7 +994,7 @@ export default function Home() {
               <div className="lg:col-span-5 self-end relative overflow-hidden flex items-center">
                 <div className="relative z-10 flex items-center justify-center">
                   <img
-                    src="/mobileMockup.png"
+                    src="/mobileMockup.webp"
                     alt="Kassongo Mobile App"
                     className="h-130 w-full object-contain drop-shadow-3xl"
                   />
@@ -1044,7 +1044,7 @@ export default function Home() {
                     h: "50px",
                     w: "auto",
                   },
-                  { src: "/1688.png", alt: "1688", h: "34px", w: "auto" },
+                  { src: "/1688.webp", alt: "1688", h: "34px", w: "auto" },
                   {
                     src: "/taobao-new-flat-design.svg",
                     alt: "Taobao",
@@ -1052,7 +1052,7 @@ export default function Home() {
                     w: "auto",
                   },
                   {
-                    src: "/aliexpress-logo-5a8f.png",
+                    src: "/aliexpress-logo-5a8f.webp",
                     alt: "AliExpress",
                     h: "100px",
                     w: "auto",
@@ -1065,7 +1065,7 @@ export default function Home() {
                   },
                   { src: "/shein-1.svg", alt: "SHEIN", h: "26px", w: "auto" },
                   {
-                    src: "/Jumia-Logo-2012.png",
+                    src: "/Jumia-Logo-2012.webp",
                     alt: "Jumia",
                     h: "50px",
                     w: "auto",
