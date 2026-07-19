@@ -28,10 +28,6 @@ export default function ExpressForwardingPage() {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-green-900 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide shadow-soft">
-                  <Truck className="w-3.5 h-3.5 text-yellow-400" />
-                  <span>Express Forwarding Solution</span>
-                </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
                   Speedy delivery.<br />
@@ -91,7 +87,7 @@ export default function ExpressForwardingPage() {
         </section>
 
         {/* Features / Benefits */}
-        <section className="bg-gray-50 py-20 px-6 border-t border-gray-105">
+        <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">Carrier Networks & Cross-Border Delivery</h2>
@@ -102,7 +98,7 @@ export default function ExpressForwardingPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <Plane className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Air Cargo Network</h3>
@@ -112,7 +108,7 @@ export default function ExpressForwardingPage() {
               </div>
 
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <Clock className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Weekly Sea Freight</h3>
@@ -122,7 +118,7 @@ export default function ExpressForwardingPage() {
               </div>
 
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <Navigation className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">End-to-End Tracking</h3>
@@ -167,22 +163,6 @@ export default function ExpressForwardingPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
-          </div>
-        </section>
-        
-        {/* CTA section */}
-        <section className="bg-green-950 text-white py-16 px-6 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-900 to-green-950"></div>
-          <div className="max-w-2xl mx-auto relative z-10 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-display font-black">Need door-to-door forwarding?</h2>
-            <p className="text-green-200/80 text-sm md:text-base leading-relaxed">
-              Register your shipping dispatch with us and get a guaranteed quote inside CEMAC or ECOWAS regions.
-            </p>
-            <div className="pt-2">
-              <Button variant="secondary" size="lg" href="/#get-address" className="mx-auto shadow-lg">
-                Get Hub Address
-              </Button>
             </div>
           </div>
         </section>

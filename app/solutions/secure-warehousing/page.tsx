@@ -28,10 +28,6 @@ export default function SecureWarehousingPage() {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-green-900 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide shadow-soft">
-                  <Warehouse className="w-3.5 h-3.5 text-yellow-400" />
-                  <span>Secure Warehousing Solution</span>
-                </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
                   Global storage.<br />
@@ -71,11 +67,11 @@ export default function SecureWarehousingPage() {
                       
                       <div className="grid grid-cols-2 gap-3">
                         <div className="bg-white/5 rounded-xl p-3 border border-white/5">
-                          <p className="text-green-205 text-[10px] uppercase font-bold">Shelved Items</p>
+                          <p className="text-green-200 text-[10px] uppercase font-bold">Shelved Items</p>
                           <p className="text-sm font-bold">142 Cartons</p>
                         </div>
                         <div className="bg-white/5 rounded-xl p-3 border border-white/5">
-                          <p className="text-green-205 text-[10px] uppercase font-bold">Repacked Status</p>
+                          <p className="text-green-200 text-[10px] uppercase font-bold">Repacked Status</p>
                           <p className="text-sm font-bold text-yellow-400">Ready</p>
                         </div>
                       </div>
@@ -88,7 +84,7 @@ export default function SecureWarehousingPage() {
         </section>
 
         {/* Features / Benefits */}
-        <section className="bg-gray-50 py-20 px-6 border-t border-gray-105">
+        <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">Bonded and Climate-Controlled Facilities</h2>
@@ -99,7 +95,7 @@ export default function SecureWarehousingPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">24/7 Security Vaults</h3>
@@ -109,7 +105,7 @@ export default function SecureWarehousingPage() {
               </div>
 
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <Boxes className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Consolidated Storage</h3>
@@ -119,7 +115,7 @@ export default function SecureWarehousingPage() {
               </div>
 
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <PackageCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Repacking & Kitting</h3>
@@ -157,22 +153,6 @@ export default function SecureWarehousingPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-        
-        {/* CTA section */}
-        <section className="bg-green-950 text-white py-16 px-6 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-900 to-green-950"></div>
-          <div className="max-w-2xl mx-auto relative z-10 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-display font-black">Secure your warehousing slot today</h2>
-            <p className="text-green-200/80 text-sm md:text-base leading-relaxed">
-              Consolidate inventory inside major trading countries and ship only when your local demand spikes.
-            </p>
-            <div className="pt-2">
-              <Button variant="secondary" size="lg" href="/contact" className="mx-auto shadow-lg">
-                Request Warehouse Quote
-              </Button>
             </div>
           </div>
         </section>

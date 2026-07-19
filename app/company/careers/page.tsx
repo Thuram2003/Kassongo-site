@@ -28,10 +28,6 @@ export default function CareersPage() {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-green-900 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide shadow-soft">
-                  <Users className="w-3.5 h-3.5 text-yellow-400" />
-                  <span>Kassongo Careers</span>
-                </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
                   Build the future of<br />
@@ -63,7 +59,7 @@ export default function CareersPage() {
                     <div className="space-y-3 text-xs text-green-100 font-semibold">
                       <div className="flex items-center gap-3">
                         <Globe2 className="w-5 h-5 text-yellow-400 shrink-0" />
-                        <span>Remote-first global team (Africa, Europe, Asia)</span>
+                        <span>Remote-first global team (Africa, Europe, Asia, America)</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Heart className="w-5 h-5 text-yellow-400 shrink-0" />
@@ -82,7 +78,7 @@ export default function CareersPage() {
         </section>
 
         {/* Benefits section */}
-        <section className="bg-gray-50 py-20 px-6 border-t border-gray-105">
+        <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">Why Work With Us?</h2>

@@ -40,7 +40,7 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.key}
-              className="rounded-3xl h-[500px] shadow-card hover:shadow-card transition-smooth relative group overflow-hidden flex flex-col"
+              className="rounded-3xl h-[380px] shadow-card hover:shadow-card transition-smooth relative group overflow-hidden flex flex-col"
             >
               <div
                 className="bg-gradient-to-b from-[#24963f] to-[#0c4e25] rounded-t-3xl p-6 pb-4 text-white flex flex-col items-center text-center"
@@ -53,13 +53,13 @@ export default function ServicesSection() {
                   <img
                     src={service.image}
                     alt={service.alt}
-                    className="w-full h-32 object-contain drop-shadow-xl transform group-hover:scale-105 transition-transform duration-500 ease-out"
+                    className="w-full h-24 object-contain drop-shadow-xl transform group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                 </div>
               </div>
-              <div className="bg-white rounded-b-3xl p-6 flex-1 flex flex-col justify-between">
+              <div className="bg-white rounded-b-3xl p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <p className="text-xs font-bold text-[#24963f] mb-3 uppercase tracking-wider">
+                  <p className="text-xs font-bold text-[#24963f] mb-2 uppercase tracking-wider">
                     {t(`home.services.${service.key}.badge`)}
                   </p>
                   <p className="text-xs text-gray-600 leading-relaxed font-medium">
@@ -70,7 +70,7 @@ export default function ServicesSection() {
                   variant="secondary"
                   size="sm"
                   href="#get-address"
-                  className="w-full shadow-soft hover:shadow-soft-md mt-4"
+                  className="w-full shadow-soft hover:shadow-soft-md mt-3"
                 >
                   {t("common.getStartedButton")}
                 </Button>

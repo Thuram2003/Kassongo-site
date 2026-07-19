@@ -14,6 +14,7 @@ import {
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Button from "../../../components/Button";
+import PartnerMarquee from "@/components/home/sections/PartnerMarquee";
 
 export default function AssistedSourcingPage() {
   return (
@@ -28,10 +29,6 @@ export default function AssistedSourcingPage() {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-green-900 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide shadow-soft">
-                  <Search className="w-3.5 h-3.5 text-yellow-400" />
-                  <span>Assisted Sourcing Solution</span>
-                </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
                   Global sourcing.<br />
@@ -54,7 +51,7 @@ export default function AssistedSourcingPage() {
               </div>
               
               <div className="relative">
-                <div className="bg-gradient-to-br from-green-950 to-green-900 text-white rounded-3xl p-6 md:p-8 shadow-soft-xl border border-green-800/40 relative overflow-hidden">
+                <div className="bg-gradient-to-br from-green-900 to-green-900 text-white rounded-3xl p-6 md:p-8 shadow-soft-xl border border-green-800/40 relative overflow-hidden">
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
                   
                   <div className="space-y-6 relative z-10">
@@ -81,8 +78,10 @@ export default function AssistedSourcingPage() {
           </div>
         </section>
 
+                        <PartnerMarquee />
+
         {/* Core Values / Features */}
-        <section className="bg-gray-50 py-20 px-6 border-t border-gray-105">
+        <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">Secure Procurement from Start to Finish</h2>
@@ -93,7 +92,7 @@ export default function AssistedSourcingPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <UserCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Supplier Audits</h3>
@@ -103,7 +102,7 @@ export default function AssistedSourcingPage() {
               </div>
 
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <Coins className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Escrow Security</h3>
@@ -113,7 +112,7 @@ export default function AssistedSourcingPage() {
               </div>
 
               <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Quality Inspections</h3>
@@ -147,22 +146,6 @@ export default function AssistedSourcingPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-        
-        {/* CTA section */}
-        <section className="bg-green-950 text-white py-16 px-6 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-900 to-green-950"></div>
-          <div className="max-w-2xl mx-auto relative z-10 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-display font-black">Get your custom sourcing agent</h2>
-            <p className="text-green-200/80 text-sm md:text-base leading-relaxed">
-              Connect with our sourcing agents in China or Turkey to negotiate directly and import cargo safely.
-            </p>
-            <div className="pt-2">
-              <Button variant="secondary" size="lg" href="/contact" className="mx-auto shadow-lg">
-                Assign Me an Agent
-              </Button>
             </div>
           </div>
         </section>
