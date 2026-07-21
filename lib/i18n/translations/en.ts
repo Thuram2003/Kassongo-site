@@ -369,8 +369,8 @@ export const en = {
   home: {
     hero: {
       badge: "Trusted Freight Forwarding",
-      title1: "Ship Smarter.",
-      title2: "Ship Faster.",
+      title1: "Shop Smarter.",
+      title2: "Shop Faster.",
       title3: "Ship Global.",
       subtitle: "Your worldwide freight forwarding partner. Consolidate, store, and ship from the US, UK, and China to anywhere in the world.",
       btnAddress: "Get Free Address",

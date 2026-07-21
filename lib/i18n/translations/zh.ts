@@ -369,9 +369,9 @@ export const zh = {
   home: {
     hero: {
       badge: "值得信赖的跨境货代",
-      title1: "更智能运送。",
-      title2: "更快速运送。",
-      title3: "全球化运送。",
+      title1: "更聪明地选购。",
+      title2: "更快速地选购。",
+      title3: "全球发货。",
       subtitle: "您的全球货运代理伙伴。提供美国、英国、中国至全球各地的仓储、包裹合箱及转运服务。",
       btnAddress: "免费获取收货地址",
       btnContact: "联系我们",

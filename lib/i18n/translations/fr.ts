@@ -369,9 +369,9 @@ export const fr = {
   home: {
     hero: {
       badge: "Transport de fret de confiance",
-      title1: "Expédiez malin.",
-      title2: "Expédiez plus vite.",
-      title3: "Expédiez partout.",
+      title1: "Achetez plus malin.",
+      title2: "Achetez plus vite.",
+      title3: "Expédiez à l'international.",
       subtitle: "Votre partenaire mondial de transport de fret. Consolidez, stockez et expédiez depuis les États-Unis, le Royaume-Uni et la Chine vers le monde entier.",
       btnAddress: "Obtenir une adresse gratuite",
       btnContact: "Contactez-nous",

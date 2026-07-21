@@ -46,27 +46,53 @@ export default function PartnerMarquee() {
       <p className="text-center text-[10px] uppercase font-bold tracking-widest text-gray-400 mb-5">
         {t("home.partners.headline")}
       </p>
-      <div className="animate-marquee">
+
+      <div className="group flex w-max animate-marquee hover:[animation-play-state:paused]">
+        {/* First copy */}
         <div className="flex items-center gap-16 px-8">
-          {[...Array(3)].map((_, si) => (
-            <div key={si} className="flex items-center gap-16">
-              {logos.map((logo) => (
-                <div
-                  key={`${si}-${logo.alt}`}
-                  className="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    style={{ height: logo.h, width: "auto" }}
-                    className="object-contain"
-                  />
-                </div>
-              ))}
+          {logos.map((logo) => (
+            <div
+              key={`a-${logo.alt}`}
+              className="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100"
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                style={{ height: logo.h, width: "auto" }}
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Second copy */}
+        <div className="flex items-center gap-16 px-8" aria-hidden="true">
+          {logos.map((logo) => (
+            <div
+              key={`b-${logo.alt}`}
+              className="flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100"
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                style={{ height: logo.h, width: "auto" }}
+                className="object-contain"
+              />
             </div>
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 80s linear infinite;
+          will-change: transform;
+        }
+      `}</style>
     </section>
   );
 }

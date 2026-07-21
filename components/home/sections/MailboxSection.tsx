@@ -199,7 +199,7 @@ export default function MailboxSection() {
             variant="secondary"
             size="lg"
             className="w-full text-center py-4"
-            onClick={() => alert(t("home.mailbox.registrationAlert"))}
+            href="/contact"
           >
             {t("home.mailbox.btnGetAddress")}
           </Button>
