@@ -14,6 +14,7 @@ import MailboxSection from "../components/home/sections/MailboxSection";
 import DownloadSection from "../components/home/sections/DownloadSection";
 import SourcingPartnersSection from "../components/home/sections/SourcingPartnersSection";
 import CountryFlagsSection from "../components/home/sections/CountryFlagsSection";
+import NetworkCountriesGrid from "@/components/network/NetworkCountriesGrid";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
         <MailboxSection />
         <DownloadSection />
         <SourcingPartnersSection />
-        <CountryFlagsSection />
+        <NetworkCountriesGrid />
       </main>
 
       <Footer />

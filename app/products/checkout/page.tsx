@@ -5,14 +5,11 @@ import {
   Globe, 
   CreditCard, 
   ShieldCheck, 
-  Sparkles, 
-  CheckCircle2, 
   ArrowRight,
   RefreshCw,
   Zap,
-  Flame,
-  Truck,
-  HeartHandshake
+  Package,
+  DollarSign
 } from "lucide-react";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
@@ -21,114 +18,102 @@ import PartnerMarquee from "@/components/home/sections/PartnerMarquee";
 import FAQComponent from "@/components/FAQComponent";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import NetworkCountriesGrid from "../../../components/network/NetworkCountriesGrid";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function CheckoutPage() {
+  const { t } = useTranslation();
 
   const faqs = [
-    {
-      question: "How does the duty and tax calculation work?",
-      answer: "Our system automatically calculates duties and taxes based on the destination country, product category (HS codes), and order value. We guarantee the quoted amount—if customs charges more, we cover the difference.",
-    },
-    {
-      question: "Which payment methods are supported?",
-      answer: "We support Mobile Money (MTN, Orange, Airtel), local bank cards, international credit/debit cards, and digital wallets. Payment options are automatically filtered based on the customer's location.",
-    },
-    {
-      question: "Can I use my existing shipping carriers?",
-      answer: "Yes! Kassongo Checkout integrates with your preferred carriers and respects your negotiated rates. We simply provide the technology to calculate accurate international shipping costs.",
-    },
-    {
-      question: "How do you handle fraud protection?",
-      answer: "We use machine learning models trained on international transaction data to flag high-risk orders. Our fraud guarantee covers approved transactions—if a fraudulent order passes our screening, we cover the loss.",
-    },
-    {
-      question: "What happens if a restricted item is in the cart?",
-      answer: "Our system scans product data at checkout and automatically identifies items restricted in the destination country. We notify customers and remove those items, allowing them to complete their purchase with compliant products.",
-    },
-    {
-      question: "How long does integration take?",
-      answer: "Most Shopify and WooCommerce stores are live within 2-3 days. Custom integrations via our API typically take 1-2 weeks depending on your tech stack.",
-    },
+    { question: t("products.checkout.faq.q1"), answer: t("products.checkout.faq.a1") },
+    { question: t("products.checkout.faq.q2"), answer: t("products.checkout.faq.a2") },
+    { question: t("products.checkout.faq.q3"), answer: t("products.checkout.faq.a3") },
+    { question: t("products.checkout.faq.q4"), answer: t("products.checkout.faq.a4") },
+    { question: t("products.checkout.faq.q5"), answer: t("products.checkout.faq.a5") },
+    { question: t("products.checkout.faq.q6"), answer: t("products.checkout.faq.a6") },
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-gray-900">
       <Header />
-      
+
       <main className="flex-1 pt-16">
         {/* Hero Section */}
         <section className="relative bg-white py-20 md:py-28 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-yellow-50 opacity-60"></div>
-          
+
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6">              
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
-                  Sell more, stress less with a <span className="text-green-800">global checkout.</span>
+                  {t("products.checkout.hero.title")}{" "}
+                  <span className="text-green-800">{t("products.checkout.hero.titleHighlight")}</span>
                 </h1>
-                
+
                 <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                  Give international shoppers an experience built for them—complete with currency conversion, local payment methods (such as Mobile Money, Orange, and regional cards), and upfront duty and tax calculations. Stay in control of your brand and margins while we handle tax compliance.
+                  {t("products.checkout.hero.subtitle")}
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button variant="primary" size="lg" href="/tools/duty-calculator" className="shadow-soft-lg transition-all">
-                    <span>Try duty calculator</span>
+                    <span>{t("products.checkout.hero.ctaPrimary")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                   <Button variant="secondary" size="lg" href="/contact">
-                    Book a demo
+                    {t("products.checkout.hero.ctaSecondary")}
                   </Button>
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="bg-gradient-to-br from-green-950 to-green-900 text-white rounded-3xl p-6 md:p-8 shadow-soft-xl border border-green-800/40 relative overflow-hidden">
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
-                  
-                  {/* Mock Checkout Window */}
+
                   <div className="space-y-6 relative z-10">
                     <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                      <span className="text-xs uppercase font-bold text-green-200 tracking-wider">Kassongo Pay Gateway</span>
-                      <span className="px-2 py-0.5 bg-yellow-400 text-green-950 text-[10px] font-bold uppercase rounded">Live</span>
+                      <span className="text-xs uppercase font-bold text-green-200 tracking-wider">{t("products.checkout.card.title")}</span>
+                      <span className="px-2 py-0.5 bg-yellow-400 text-green-950 text-[10px] font-bold uppercase rounded">{t("products.checkout.card.badgeLive")}</span>
                     </div>
-                    
+
                     <div className="space-y-3">
                       <div className="flex justify-between items-center bg-white/5 rounded-xl p-3.5 border border-white/5">
                         <div className="flex items-center gap-3">
-                          <Globe className="w-5 h-5 text-yellow-400" />
+                          <Package className="w-5 h-5 text-yellow-400" />
                           <div>
-                            <p className="text-xs text-green-200 uppercase font-bold">Delivery Zone</p>
-                            <p className="text-sm font-semibold">Cameroon (CEMAC)</p>
+                            <p className="text-xs text-green-200 uppercase font-bold">{t("products.checkout.card.shipmentRoute")}</p>
+                            <p className="text-sm font-semibold">Guangzhou CN → Douala CM</p>
                           </div>
                         </div>
-                        <span className="text-[10px] bg-green-850 px-2 py-1 rounded font-bold">Import Duties Auto-Applied</span>
+                        <span className="text-[10px] bg-green-850 px-2 py-1 rounded font-bold">{t("products.checkout.card.statusBadge")}</span>
                       </div>
-                      
+
                       <div className="flex justify-between items-center bg-white/5 rounded-xl p-3.5 border border-white/5">
                         <div className="flex items-center gap-3">
                           <CreditCard className="w-5 h-5 text-yellow-400" />
                           <div>
-                            <p className="text-xs text-green-200 uppercase font-bold">Local Payment</p>
-                            <p className="text-sm font-semibold">Mobile Money (MoMo / Orange)</p>
+                            <p className="text-xs text-green-200 uppercase font-bold">{t("products.checkout.card.paymentMethod")}</p>
+                            <p className="text-sm font-semibold">Mobile Money (MTN / Orange)</p>
                           </div>
                         </div>
-                        <span className="text-xs font-bold text-yellow-400">XAF Available</span>
+                        <span className="text-xs font-bold text-yellow-400">{t("products.checkout.card.xafAvailable")}</span>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2 border-t border-white/10 pt-4 text-sm text-green-100">
                       <div className="flex justify-between">
-                        <span>Cart Total</span>
-                        <span>$120</span>
+                        <span>{t("products.checkout.card.shippingCost")}</span>
+                        <span>$85</span>
                       </div>
-                      <div className="flex justify-between text-yellow-400 font-semibold">
-                        <span>Duties & Taxes (Cameroon CEMAC)</span>
-                        <span>+ $23.10</span>
+                      <div className="flex justify-between">
+                        <span>{t("products.checkout.card.importDuties")}</span>
+                        <span>+ $18</span>
                       </div>
-                      <div className="flex justify-between text-white font-bold text-lg pt-1">
-                        <span>Total Payable</span>
-                        <span>FCFA 86,575</span>
+                      <div className="flex justify-between">
+                        <span>{t("products.checkout.card.handlingPackaging")}</span>
+                        <span>+ $7</span>
+                      </div>
+                      <div className="flex justify-between text-white font-bold text-lg pt-2 border-t border-white/10">
+                        <span>{t("products.checkout.card.totalPayable")}</span>
+                        <span>FCFA 66,550</span>
                       </div>
                     </div>
                   </div>
@@ -138,117 +123,106 @@ export default function CheckoutPage() {
           </div>
         </section>
 
-                <PartnerMarquee />
+        <PartnerMarquee />
 
-        {/* Why Choose Checkout Features */}
-        <section className="bg-white py-20 px-6">
+        {/* Features Grid */}
+        <section className="bg-green-900 py-20 px-6">
           <div className="max-w-7xl mx-auto space-y-16">
             <div className="text-center max-w-3xl mx-auto space-y-4">
-              <h2 className="text-3xl md:text-5xl font-display font-black text-gray-900 tracking-tight">Why merchants choose Checkout</h2>
-              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                Checkout was built to solve international ecommerce challenges, where trust is hard to earn. From the first moment a shopper lands on your site to the moment their order arrives, every part of our system works together to create a localized, low-friction experience while keeping you in control.
+              <h2 className="text-3xl md:text-5xl font-display font-black text-white tracking-tight">{t("products.checkout.features.title")}</h2>
+              <p className="text-green-100 text-sm md:text-base leading-relaxed">
+                {t("products.checkout.features.subtitle")}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Feature 1 */}
-              <div className="border border-gray-100 rounded-3xl p-6 shadow-soft space-y-4 bg-gray-50/30">
-                <div className="w-10 h-10 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
-                  <Globe className="w-5 h-5" />
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
+                  <CreditCard className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Engage Shoppers with Hello</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Greets customers in their own language and automatically adapts your site to their currency—giving them instant confidence that you ship to their location before they even start browsing.
+                <h3 className="text-lg font-bold text-white">{t("products.checkout.features.item1Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.checkout.features.item1Desc")}
                 </p>
               </div>
 
-              {/* Feature 2 */}
-              <div className="border border-gray-100 rounded-3xl p-6 shadow-soft space-y-4 bg-gray-50/30">
-                <div className="w-10 h-10 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
-                  <Truck className="w-5 h-5" />
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
+                  <Globe className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Stay in Control of Shipping</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Use your preferred carriers and negotiated rates. Our advanced shipment rating provides dimensional weight, cartonization, and custom shipping logic without taking over your operations.
+                <h3 className="text-lg font-bold text-white">{t("products.checkout.features.item2Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.checkout.features.item2Desc")}
                 </p>
               </div>
 
-              {/* Feature 3 */}
-              <div className="border border-gray-100 rounded-3xl p-6 shadow-soft space-y-4 bg-gray-50/30">
-                <div className="w-10 h-10 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
-                  <Zap className="w-5 h-5" />
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
+                  <DollarSign className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Prevent Restricted Items</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Shipping restricted items leads to customs seizures and delays. We scan catalog data and remove restricted products at checkout, keeping you compliant without unnecessary blanket bans.
+                <h3 className="text-lg font-bold text-white">{t("products.checkout.features.item3Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.checkout.features.item3Desc")}
                 </p>
               </div>
 
-              {/* Feature 4 */}
-              <div className="border border-gray-100 rounded-3xl p-6 shadow-soft space-y-4 bg-gray-50/30">
-                <div className="w-10 h-10 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
-                  <ShieldCheck className="w-5 h-5" />
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
+                  <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Avoid Surprise Fees at Delivery</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Provide duty and tax calculation at checkout and guarantee that no additional costs will be due at delivery. If customs charges more than quoted, we cover the difference.
+                <h3 className="text-lg font-bold text-white">{t("products.checkout.features.item4Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.checkout.features.item4Desc")}
                 </p>
               </div>
 
-              {/* Feature 5 */}
-              <div className="border border-gray-100 rounded-3xl p-6 shadow-soft space-y-4 bg-gray-50/30">
-                <div className="w-10 h-10 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
-                  <RefreshCw className="w-5 h-5" />
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
+                  <RefreshCw className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Stay Compliant without Risk</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  We handle tax registration and remittance, assuming liability for low-value tax schemes like UK VAT, EU IOSS, and others. Grow internationally without global tax overhead.
+                <h3 className="text-lg font-bold text-white">{t("products.checkout.features.item5Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.checkout.features.item5Desc")}
                 </p>
               </div>
 
-              {/* Feature 6 */}
-              <div className="border border-gray-100 rounded-3xl p-6 shadow-soft space-y-4 bg-gray-50/30">
-                <div className="w-10 h-10 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
-                  <HeartHandshake className="w-5 h-5" />
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
+                  <Zap className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Protect Against Fraud</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Built-in fraud protection designed specifically for international transactions. We screen orders based on country-specific risk. If a fraudulent order slips through, we cover the loss.
+                <h3 className="text-lg font-bold text-white">{t("products.checkout.features.item6Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.checkout.features.item6Desc")}
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Simple tech stack section */}
+        {/* Tech Stack */}
         <section className="bg-white py-20 px-6">
           <div className="max-w-4xl mx-auto text-center space-y-12">
-            <h2 className="text-2xl md:text-3xl font-display font-black text-gray-900">Simplify your tech stack</h2>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-gray-900">{t("products.checkout.techStack.title")}</h2>
             <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
-              Kassongo eliminates multi-app complexity by consolidating a localized checkout experience, international payment processing, fraud screening, tax compliance, shipping label creation, and commercial invoice management into one streamlined product.
+              {t("products.checkout.techStack.subtitle")}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-gray-700">
-              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">International Payments</div>
-              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">Fraud Protection</div>
-              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">Landed Cost Engine</div>
-              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">Tax Remittance</div>
+              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">{t("products.checkout.techStack.method1")}</div>
+              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">{t("products.checkout.techStack.method2")}</div>
+              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">{t("products.checkout.techStack.method3")}</div>
+              <div className="p-4 border border-gray-100 rounded-2xl shadow-soft">{t("products.checkout.techStack.method4")}</div>
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
         <TestimonialSlider />
-
-        {/* FAQ Section */}
-        <FAQComponent
-          title="Checkout FAQs"
-          subtitle="Common questions about our international checkout solution"
-          faqs={faqs}
-        />
-
-        {/* Network Countries Grid */}
         <NetworkCountriesGrid />
 
+        <FAQComponent
+          title={t("products.checkout.faq.title")}
+          subtitle={t("products.checkout.faq.subtitle")}
+          faqs={faqs}
+        />
       </main>
 
       <Footer />

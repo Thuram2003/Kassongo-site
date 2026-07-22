@@ -13,33 +13,35 @@ import Button from "../../../components/Button";
 import NetworkCountriesGrid from "../../../components/network/NetworkCountriesGrid";
 import FAQComponent from "@/components/FAQComponent";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function ExpressForwardingPage() {
+  const { t } = useTranslation();
 
   const faqs = [
     {
-      question: "What's the difference between air and ocean freight?",
-      answer: "Air freight is faster (3-6 days) but more expensive per kg. Ocean freight is economical for larger shipments but takes 28-40 days. We help you choose based on urgency and budget.",
+      question: t("solutions.expressForwarding.faq.q1"),
+      answer: t("solutions.expressForwarding.faq.a1"),
     },
     {
-      question: "Do you handle customs clearance?",
-      answer: "Yes, our express forwarding service includes complete customs documentation, clearance, and port delivery. We prepare all required paperwork and coordinate with customs authorities.",
+      question: t("solutions.expressForwarding.faq.q2"),
+      answer: t("solutions.expressForwarding.faq.a2"),
     },
     {
-      question: "Can I track my shipment in real-time?",
-      answer: "Absolutely. You'll receive GPS tracking updates at every stage: departure, customs clearance, and final delivery. Access tracking through your dashboard or mobile app.",
+      question: t("solutions.expressForwarding.faq.q3"),
+      answer: t("solutions.expressForwarding.faq.a3"),
     },
     {
-      question: "What items can be shipped via express forwarding?",
-      answer: "We handle most commercial goods including electronics, machinery, consumer products, and industrial equipment. Prohibited items include hazardous materials, weapons, and restricted pharmaceuticals.",
+      question: t("solutions.expressForwarding.faq.q4"),
+      answer: t("solutions.expressForwarding.faq.a4"),
     },
     {
-      question: "How are shipping costs calculated?",
-      answer: "Costs depend on weight, volume, origin, destination, and transport mode (air/ocean). We provide transparent quotes upfront with no hidden fees. Volume discounts apply for regular shippers.",
+      question: t("solutions.expressForwarding.faq.q5"),
+      answer: t("solutions.expressForwarding.faq.a5"),
     },
     {
-      question: "What happens if my shipment is delayed?",
-      answer: "We proactively monitor all shipments and notify you immediately of any delays. Our team works with carriers to resolve issues quickly and keep you informed throughout the process.",
+      question: t("solutions.expressForwarding.faq.q6"),
+      answer: t("solutions.expressForwarding.faq.a6"),
     },
   ];
 
@@ -57,100 +59,76 @@ export default function ExpressForwardingPage() {
               <div className="space-y-6">
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
-                  Speedy delivery.<br />
-                  <span className="text-green-800">Clear path.</span>
+                  {t("solutions.expressForwarding.hero.title")}<br />
+                  <span className="text-green-800">{t("solutions.expressForwarding.hero.titleHighlight")}</span>
                 </h1>
                 
                 <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                  Get your cargo delivered door-to-door with our optimized logistics routes. We provide daily air freight dispatches and weekly ocean container consolidations, complete with custom clearing support.
+                  {t("solutions.expressForwarding.hero.subtitle")}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button variant="primary" size="lg" href="/tools/duty-calculator" className="shadow-soft-lg transition-all">
-                    <span>Calculate Shipping Quote</span>
+                    <span>{t("solutions.expressForwarding.hero.ctaPrimary")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                   <Button variant="secondary" size="lg" href="/contact">
-                    Talk to Logistics Team
+                    {t("solutions.expressForwarding.hero.ctaSecondary")}
                   </Button>
                 </div>
               </div>
               
-              <div className="relative">
-                <div className="bg-gradient-to-br from-green-950 to-green-900 text-white rounded-3xl p-6 md:p-8 shadow-soft-xl border border-green-800/40 relative overflow-hidden">
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
-                  
-                  <div className="space-y-6 relative z-10">
-                    <h3 className="font-display font-black text-lg text-white">Live Tracking Details</h3>
-                    
-                    <div className="space-y-3 text-xs">
-                      <div className="bg-white/5 rounded-xl p-4 border border-white/5 flex justify-between items-center">
-                        <div>
-                          <p className="text-green-200 uppercase font-bold">Current Location</p>
-                          <p className="text-sm font-semibold">Guangzhou Airport (CAN)</p>
-                        </div>
-                        <Plane className="w-5 h-5 text-yellow-400" />
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-4 border border-white/5 flex justify-between items-center">
-                        <div>
-                          <p className="text-green-200 uppercase font-bold">Shipment Status</p>
-                          <p className="text-sm font-semibold">Customs Docs Approved</p>
-                        </div>
-                        <CheckCircle2 className="w-5 h-5 text-yellow-400" />
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-4 border border-white/5 flex justify-between items-center">
-                        <div>
-                          <p className="text-green-200 uppercase font-bold">Estimated Delivery</p>
-                          <p className="text-sm font-semibold">4 - 6 Business Days</p>
-                        </div>
-                        <Clock className="w-5 h-5 text-yellow-400" />
-                      </div>
-                    </div>
-                  </div>
+              <div className="relative flex items-center justify-center">
+                <div className="relative w-full overflow-hidden rounded-2xl shadow-soft-xl border border-gray-100">
+                  <img
+                    src="/solutions/image3.svg"
+                    alt={t("solutions.secureWarehousing.hero.imageAlt")}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features / Benefits */}
-        <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
+{/* Features / Benefits */}
+        <section className="bg-green-900 py-20 px-6">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
-              <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">Carrier Networks & Cross-Border Delivery</h2>
-              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We handle the heavy lifting of customs forms, clearance checks, and shipping, ensuring smooth deliveries.
+              <h2 className="text-3xl md:text-4xl font-display font-black text-white">{t("solutions.expressForwarding.features.title")}</h2>
+              <p className="text-green-100 text-sm md:text-base leading-relaxed">
+                {t("solutions.expressForwarding.features.subtitle")}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Plane className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Air Cargo Network</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Fast, daily flights matching major trade routes (Guangzhou, Yiwu, Paris, London, Newark to Douala, Lagos, Nairobi).
+                <h3 className="text-lg font-bold text-white">{t("solutions.expressForwarding.features.item1Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.expressForwarding.features.item1Desc")}
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Clock className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Weekly Sea Freight</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Weekly container shipping departures with transparent packing lists and groupage options to reduce forwarding costs.
+                <h3 className="text-lg font-bold text-white">{t("solutions.expressForwarding.features.item2Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.expressForwarding.features.item2Desc")}
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Navigation className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">End-to-End Tracking</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Real-time GPS status alerts. Know where your cargo is from the factory floor to the final pickup counter.
+                <h3 className="text-lg font-bold text-white">{t("solutions.expressForwarding.features.item3Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.expressForwarding.features.item3Desc")}
                 </p>
               </div>
             </div>
@@ -161,25 +139,25 @@ export default function ExpressForwardingPage() {
         <section className="bg-white py-20 px-6">
           <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="text-2xl md:text-3xl font-display font-black text-center text-gray-900">
-              Kassongo Main Shipping Channels
+              {t("solutions.expressForwarding.channels.title")}
             </h2>
             
             <div className="overflow-x-auto border border-gray-100 rounded-2xl shadow-soft">
               <table className="w-full text-left text-sm border-collapse">
                 <thead>
                   <tr className="bg-gray-50 border-b border-gray-100 font-bold text-gray-700">
-                    <th className="p-4">Origin Hub</th>
-                    <th className="p-4">Destination Hub</th>
-                    <th className="p-4">Transit Air</th>
-                    <th className="p-4">Transit Sea</th>
+                    <th className="p-4">{t("solutions.expressForwarding.channels.colOrigin")}</th>
+                    <th className="p-4">{t("solutions.expressForwarding.channels.colDest")}</th>
+                    <th className="p-4">{t("solutions.expressForwarding.channels.colAir")}</th>
+                    <th className="p-4">{t("solutions.expressForwarding.channels.colSea")}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-50 text-gray-600">
                   {[
-                    { origin: "Guangzhou (CN)", dest: "Douala (CM)", air: "3 - 5 Days", sea: "30 - 35 Days" },
-                    { origin: "Yiwu (CN)", dest: "Lagos (NG)", air: "4 - 6 Days", sea: "28 - 32 Days" },
-                    { origin: "Paris (FR)", dest: "Nairobi (KE)", air: "2 - 4 Days", sea: "24 - 28 Days" },
-                    { origin: "Newark (US)", dest: "Douala (CM)", air: "4 - 7 Days", sea: "35 - 40 Days" },
+                    { origin: "Guangzhou (CN)", dest: "Douala (CM)", air: `3 - 5 ${t("solutions.expressForwarding.channels.unitDays")}`, sea: `30 - 35 ${t("solutions.expressForwarding.channels.unitDays")}` },
+                    { origin: "Yiwu (CN)", dest: "Lagos (NG)", air: `4 - 6 ${t("solutions.expressForwarding.channels.unitDays")}`, sea: `28 - 32 ${t("solutions.expressForwarding.channels.unitDays")}` },
+                    { origin: "Paris (FR)", dest: "Nairobi (KE)", air: `2 - 4 ${t("solutions.expressForwarding.channels.unitDays")}`, sea: `24 - 28 ${t("solutions.expressForwarding.channels.unitDays")}` },
+                    { origin: "Newark (US)", dest: "Douala (CM)", air: `4 - 7 ${t("solutions.expressForwarding.channels.unitDays")}`, sea: `35 - 40 ${t("solutions.expressForwarding.channels.unitDays")}` },
                   ].map((row, idx) => (
                     <tr key={idx} className="hover:bg-gray-50/50">
                       <td className="p-4 font-semibold text-gray-900">{row.origin}</td>
@@ -196,18 +174,19 @@ export default function ExpressForwardingPage() {
 
         {/* Testimonials Section */}
         <TestimonialSlider />
+        <NetworkCountriesGrid />
 
         {/* FAQ Section */}
         <FAQComponent
-          title="Express Forwarding FAQs"
-          subtitle="Common questions about our air and ocean freight services"
+          title={t("solutions.expressForwarding.faq.title")}
+          subtitle={t("solutions.expressForwarding.faq.subtitle")}
           faqs={faqs}
         />
 
-        <NetworkCountriesGrid />
       </main>
 
       <Footer />
     </div>
   );
 }
+

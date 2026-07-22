@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 interface FAQItem {
   question: string;
@@ -16,11 +17,14 @@ interface FAQComponentProps {
 }
 
 export default function FAQComponent({
-  title = "Frequently Asked Questions",
-  subtitle = "Everything you need to know about our services",
+  title,
+  subtitle,
   faqs,
   className = "",
 }: FAQComponentProps) {
+  const { t } = useTranslation();
+  const displayTitle = title || t("faq.title") || "Frequently Asked Questions";
+  const displaySubtitle = subtitle || t("faq.subtitle") || "Everything you need to know about our services";
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -33,11 +37,11 @@ export default function FAQComponent({
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            {title}
+            {displayTitle}
           </h2>
-          {subtitle && (
+          {displaySubtitle && (
             <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              {subtitle}
+              {displaySubtitle}
             </p>
           )}
         </div>

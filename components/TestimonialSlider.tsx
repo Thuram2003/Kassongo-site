@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { Testimonial, ITestimonial } from "@/types/testimonial";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 interface TestimonialSliderProps {
   testimonials?: ITestimonial[] | Testimonial[];
@@ -59,9 +60,12 @@ export default function TestimonialSlider({
   testimonials: customTestimonials,
   autoPlayInterval = 6000,
   className = "",
-  title = "What Global Traders Say About Kassongo",
-  subtitle = "Trusted by businesses across Africa, Europe, Asia & North America for end-to-end trade logistics",
+  title,
+  subtitle,
 }: TestimonialSliderProps) {
+  const { t } = useTranslation();
+  const displayTitle = title || t("testimonials.title");
+  const displaySubtitle = subtitle || t("testimonials.subtitle");
   const testimonialsList = (customTestimonials && customTestimonials.length > 0)
     ? customTestimonials
     : Testimonial.getGlobalTestimonials();
@@ -104,10 +108,10 @@ export default function TestimonialSlider({
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-gray-900 tracking-tight">
-            {title}
+            {displayTitle}
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-            {subtitle}
+            {displaySubtitle}
           </p>
         </div>
 

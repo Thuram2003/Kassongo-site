@@ -15,8 +15,12 @@ import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Button from "../../../components/Button";
 import NetworkCountriesGrid from "../../../components/network/NetworkCountriesGrid";
+import TestimonialSlider from "@/components/TestimonialSlider";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function ConsolidationPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-gray-900">
       <Header />
@@ -31,96 +35,76 @@ export default function ConsolidationPage() {
               <div className="space-y-6">
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
-                  Combine packages.<br />
-                  <span className="text-green-800">Cut costs by 60%.</span>
+                  {t("solutions.consolidation.hero.title")}<br />
+                  <span className="text-green-800">{t("solutions.consolidation.hero.titleHighlight")}</span>
                 </h1>
                 
                 <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                  Stop paying separate minimum freight charges for every single package. Our consolidation service lets you purchase goods from multiple suppliers and combine them into a single customs-cleared container shipment.
+                  {t("solutions.consolidation.hero.subtitle")}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button variant="primary" size="lg" href="/#get-address" className="shadow-soft-lg transition-all">
-                    <span>Get Address & Start</span>
+                    <span>{t("solutions.consolidation.hero.ctaPrimary")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                   <Button variant="secondary" size="lg" href="/tools/duty-calculator">
-                    Estimate landed cost
+                    {t("solutions.consolidation.hero.ctaSecondary")}
                   </Button>
                 </div>
               </div>
               
-              <div className="relative">
-                <div className="bg-gradient-to-br from-green-950 to-green-900 text-white rounded-3xl p-6 md:p-8 shadow-soft-xl border border-green-800/40 relative overflow-hidden">
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
-                  
-                  <div className="space-y-6 relative z-10">
-                    <h3 className="font-display font-black text-lg text-white">Consolidation Example</h3>
-                    
-                    <div className="space-y-3 text-xs">
-                      <div className="bg-white/5 rounded-xl p-3 border border-white/5 flex justify-between items-center">
-                        <span>Supplier A (Shoes - Yiwu)</span>
-                        <span className="font-bold">15 kg</span>
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-3 border border-white/5 flex justify-between items-center">
-                        <span>Supplier B (Bags - Yiwu)</span>
-                        <span className="font-bold">25 kg</span>
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-3 border border-white/5 flex justify-between items-center">
-                        <span>Supplier C (Tech - Shenzhen)</span>
-                        <span className="font-bold">10 kg</span>
-                      </div>
-                      
-                      <div className="border-t border-white/10 pt-3 flex justify-between items-center text-yellow-400 font-bold">
-                        <span>Combined Shipment (1 Box)</span>
-                        <span>50 kg total</span>
-                      </div>
-                    </div>
-                  </div>
+              <div className="relative flex items-center justify-center">
+                <div className="relative w-full overflow-hidden rounded-2xl shadow-soft-xl border border-gray-100">
+                  <img
+                    src="/solutions/image4.svg"
+                    alt={t("solutions.secureWarehousing.hero.imageAlt")}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features / Benefits */}
-        <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
+{/* Features / Benefits */}
+        <section className="bg-green-900 py-20 px-6">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
-              <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">How Consolidated Shipping Works</h2>
-              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                Save on international logistics by shipping larger, unified weights instead of scattered parcels.
+              <h2 className="text-3xl md:text-4xl font-display font-black text-white">{t("solutions.consolidation.features.title")}</h2>
+              <p className="text-green-100 text-sm md:text-base leading-relaxed">
+                {t("solutions.consolidation.features.subtitle")}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <TrendingDown className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Volume Discounts</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Shipping rates decrease as weight categories increase. Combining goods helps you reach higher weight tiers and pay less per kg.
+                <h3 className="text-lg font-bold text-white">{t("solutions.consolidation.features.item1Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.consolidation.features.item1Desc")}
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Layers className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Repacking & Box Merging</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Our warehouse operators unpack redundant external cardboard boxes, merging items into a single container to optimize dimensional weight.
+                <h3 className="text-lg font-bold text-white">{t("solutions.consolidation.features.item2Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.consolidation.features.item2Desc")}
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Scale className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Single customs entry</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Instead of paying clearance and documentation fees for 5 separate shipments, you pay just one flat fee for the consolidated box.
+                <h3 className="text-lg font-bold text-white">{t("solutions.consolidation.features.item3Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.consolidation.features.item3Desc")}
                 </p>
               </div>
             </div>
@@ -131,31 +115,32 @@ export default function ConsolidationPage() {
         <section className="bg-white py-20 px-6">
           <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="text-2xl md:text-3xl font-display font-black text-center text-gray-900">
-              Perfect for e-commerce and retail merchants
+              {t("solutions.consolidation.benefits.title")}
             </h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-gray-700">
               <div className="flex gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-700 shrink-0 mt-0.5" />
-                <span>Up to 30 days of free package storage in our global hubs</span>
+                <span>{t("solutions.consolidation.benefits.item1")}</span>
               </div>
               <div className="flex gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-700 shrink-0 mt-0.5" />
-                <span>Discarding heavy shipping crates to minimize chargeable weight</span>
+                <span>{t("solutions.consolidation.benefits.item2")}</span>
               </div>
               <div className="flex gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-700 shrink-0 mt-0.5" />
-                <span>Secure photos of packages uploaded directly to your dashboard</span>
+                <span>{t("solutions.consolidation.benefits.item3")}</span>
               </div>
               <div className="flex gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-700 shrink-0 mt-0.5" />
-                <span>Flexible transport: choose between fast air cargo or ocean LCL</span>
+                <span>{t("solutions.consolidation.benefits.item4")}</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Network Countries Grid */}
+        <TestimonialSlider />
         <NetworkCountriesGrid />
       </main>
 
@@ -163,3 +148,4 @@ export default function ConsolidationPage() {
     </div>
   );
 }
+

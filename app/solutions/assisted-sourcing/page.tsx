@@ -17,32 +17,36 @@ import Button from "../../../components/Button";
 import PartnerMarquee from "@/components/home/sections/PartnerMarquee";
 import FAQComponent from "@/components/FAQComponent";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import NetworkCountriesGrid from "@/components/network/NetworkCountriesGrid";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function AssistedSourcingPage() {
+  const { t } = useTranslation();
+
   const faqs = [
     {
-      question: "How does the escrow payment system work?",
-      answer: "You transfer funds to Kassongo's secure escrow account. We hold the payment until our inspectors verify product quality at the factory. Only then do we release funds to the supplier. If quality fails, you get a full refund.",
+      question: t("solutions.assistedSourcing.faq.q1"),
+      answer: t("solutions.assistedSourcing.faq.a1"),
     },
     {
-      question: "What kind of products can you source?",
-      answer: "We specialize in electronics, machinery, consumer goods, and industrial equipment from China, Turkey, and Europe. We handle both bulk orders and sample procurement.",
+      question: t("solutions.assistedSourcing.faq.q2"),
+      answer: t("solutions.assistedSourcing.faq.a2"),
     },
     {
-      question: "How long does the sourcing process take?",
-      answer: "Sample procurement takes 2-3 weeks. Bulk orders with inspection take 4-6 weeks from order placement to port delivery. Rush orders can be arranged for an additional fee.",
+      question: t("solutions.assistedSourcing.faq.q3"),
+      answer: t("solutions.assistedSourcing.faq.a3"),
     },
     {
-      question: "What's included in a factory inspection?",
-      answer: "Our inspectors verify product specifications, conduct functional tests, check packaging quality, count carton quantities, and document the loading process with photos and video.",
+      question: t("solutions.assistedSourcing.faq.q4"),
+      answer: t("solutions.assistedSourcing.faq.a4"),
     },
     {
-      question: "Do you handle customs clearance?",
-      answer: "Yes. Goods are delivered to our consolidation center where we handle all customs documentation, clearance, and final delivery to your location.",
+      question: t("solutions.assistedSourcing.faq.q5"),
+      answer: t("solutions.assistedSourcing.faq.a5"),
     },
     {
-      question: "What if I'm not satisfied with the supplier quotes?",
-      answer: "There's no commitment until you approve a quote. We typically present 3-5 verified supplier options with competitive pricing so you can choose the best fit.",
+      question: t("solutions.assistedSourcing.faq.q6"),
+      answer: t("solutions.assistedSourcing.faq.a6"),
     },
   ];
 
@@ -60,93 +64,78 @@ export default function AssistedSourcingPage() {
               <div className="space-y-6">
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
-                  Global sourcing.<br />
-                  <span className="text-green-800">Verified suppliers.</span>
+                  {t("solutions.assistedSourcing.hero.title")}<br />
+                  <span className="text-green-800">{t("solutions.assistedSourcing.hero.titleHighlight")}</span>
                 </h1>
                 
                 <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                  Stop worrying about scams, quality issues, or language barriers. Kassongo's assisted sourcing team handles supplier verification, payment escrow, factory inspections, and customs-compliant transport from China, Europe, and Turkey to Africa.
+                  {t("solutions.assistedSourcing.hero.subtitle")}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button variant="primary" size="lg" href="/contact" className="shadow-soft-lg transition-all">
-                    <span>Source a Product</span>
+                    <span>{t("solutions.assistedSourcing.hero.ctaPrimary")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                   <Button variant="secondary" size="lg" href="#how-it-works">
-                    Learn How it Works
+                    {t("solutions.assistedSourcing.hero.ctaSecondary")}
                   </Button>
                 </div>
               </div>
               
-              <div className="relative">
-                <div className="bg-gradient-to-br from-green-900 to-green-900 text-white rounded-3xl p-6 md:p-8 shadow-soft-xl border border-green-800/40 relative overflow-hidden">
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
-                  
-                  <div className="space-y-6 relative z-10">
-                    <h3 className="font-display font-black text-lg text-white">Sourcing Request</h3>
-                    
-                    <div className="space-y-3 text-xs">
-                      <div className="bg-white/5 rounded-xl p-4 border border-white/5 space-y-1">
-                        <p className="text-green-200 uppercase font-bold">1. Supplier Status</p>
-                        <p className="text-sm font-semibold">Verified Factory (Guangzhou, CN)</p>
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-4 border border-white/5 space-y-1">
-                        <p className="text-green-200 uppercase font-bold">2. Inspection Quality Check</p>
-                        <p className="text-sm font-semibold text-yellow-400">Passed - Certificate Issued</p>
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-4 border border-white/5 space-y-1">
-                        <p className="text-green-200 uppercase font-bold">3. Escrow Payment Protection</p>
-                        <p className="text-sm font-semibold">Funds secured in Kassongo Escrow</p>
-                      </div>
-                    </div>
-                  </div>
+              <div className="relative flex items-center justify-center">
+                <div className="relative w-full overflow-hidden rounded-2xl shadow-soft-xl border border-gray-100">
+                  <img
+                    src="/solutions/image1.svg"
+                    alt={t("solutions.secureWarehousing.hero.imageAlt")}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-                        <PartnerMarquee />
+        <PartnerMarquee />
 
-        {/* Core Values / Features */}
-        <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
+{/* Core Values / Features */}
+        <section className="bg-green-900 py-20">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
-              <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">Secure Procurement from Start to Finish</h2>
-              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We act as your physical representatives in global markets, protecting your investments at every step.
+              <h2 className="text-3xl md:text-4xl font-display font-black text-white">{t("solutions.assistedSourcing.features.title")}</h2>
+              <p className="text-green-100 text-sm md:text-base leading-relaxed">
+                {t("solutions.assistedSourcing.features.subtitle")}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <UserCheck className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Supplier Audits</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  We check licenses, inspect facilities, and evaluate previous client feedback so you only trade with legitimate manufacturers.
+                <h3 className="text-lg font-bold text-white">{t("solutions.assistedSourcing.features.item1Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.assistedSourcing.features.item1Desc")}
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Coins className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Escrow Security</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Your funds are held safely by Kassongo and are only released to the supplier once our inspectors approve the cargo quality at packing.
+                <h3 className="text-lg font-bold text-white">{t("solutions.assistedSourcing.features.item2Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.assistedSourcing.features.item2Desc")}
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-900">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Quality Inspections</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Our local inspectors run physical test reports, count boxes, and verify container loading to ensure product quality is exactly what you ordered.
+                <h3 className="text-lg font-bold text-white">{t("solutions.assistedSourcing.features.item3Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("solutions.assistedSourcing.features.item3Desc")}
                 </p>
               </div>
             </div>
@@ -157,15 +146,15 @@ export default function AssistedSourcingPage() {
         <section id="how-it-works" className="bg-white py-20 px-6">
           <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="text-2xl md:text-3xl font-display font-black text-center text-gray-900">
-              The Assisted Sourcing Process
+              {t("solutions.assistedSourcing.process.title")}
             </h2>
             
             <div className="space-y-6">
               {[
-                { step: "01", title: "Submit Procurement Details", desc: "Share specifications, photos, and estimated target price of the items you need to source." },
-                { step: "02", title: "Review Quotes & Supplier Profiles", desc: "We source quotes from verified factories and present detailed product sheets with transport quotes." },
-                { step: "03", title: "Deploy Escrow and Inspection", desc: "Secure the order with deposit escrow. We inspect components during manufacturing and loading." },
-                { step: "04", title: "Port Delivery & Final Shipping", desc: "Goods are delivered to Kassongo's regional consolidation center, custom-cleared, and dispatched to your country." }
+                { step: "01", title: t("solutions.assistedSourcing.process.step1Title"), desc: t("solutions.assistedSourcing.process.step1Desc") },
+                { step: "02", title: t("solutions.assistedSourcing.process.step2Title"), desc: t("solutions.assistedSourcing.process.step2Desc") },
+                { step: "03", title: t("solutions.assistedSourcing.process.step3Title"), desc: t("solutions.assistedSourcing.process.step3Desc") },
+                { step: "04", title: t("solutions.assistedSourcing.process.step4Title"), desc: t("solutions.assistedSourcing.process.step4Desc") }
               ].map((item) => (
                 <div key={item.step} className="flex gap-6 border-b border-gray-50 pb-6 last:border-0">
                   <span className="text-3xl font-display font-black text-green-800 tracking-tight shrink-0">{item.step}</span>
@@ -181,11 +170,13 @@ export default function AssistedSourcingPage() {
 
         {/* Testimonials Section */}
         <TestimonialSlider />
+        <NetworkCountriesGrid />
+        
 
         {/* FAQ Section */}
         <FAQComponent
-          title="Assisted Sourcing FAQs"
-          subtitle="Common questions about our supplier verification and procurement services"
+          title={t("solutions.assistedSourcing.faq.title")}
+          subtitle={t("solutions.assistedSourcing.faq.subtitle")}
           faqs={faqs}
         />
       </main>
@@ -194,3 +185,4 @@ export default function AssistedSourcingPage() {
     </div>
   );
 }
+

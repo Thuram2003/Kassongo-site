@@ -5,11 +5,8 @@ import {
   Calculator, 
   ShieldAlert, 
   ArrowRight,
-  TrendingUp, 
   Scale, 
-  CheckCircle2,
   Percent,
-  CheckCircle,
   FileText,
   BadgeDollarSign
 } from "lucide-react";
@@ -19,108 +16,94 @@ import Button from "../../../components/Button";
 import FAQComponent from "@/components/FAQComponent";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import NetworkCountriesGrid from "../../../components/network/NetworkCountriesGrid";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function LandedCostPage() {
+  const { t } = useTranslation();
 
   const faqs = [
-    {
-      question: "What is a landed cost guarantee?",
-      answer: "When we calculate duties and taxes at checkout, we guarantee that amount. If customs charges more than we quoted, Kassongo pays the difference—you never absorb unexpected fees.",
-    },
-    {
-      question: "How accurate are your HS code classifications?",
-      answer: "We use a combination of AI and human customs experts to classify products. Our classification accuracy rate is 99.4%, and any misclassification is covered by our guarantee.",
-    },
-    {
-      question: "Do you support de minimis thresholds?",
-      answer: "Yes, our engine automatically applies de minimis rules (duty-free thresholds) for every country. For example, shipments under $800 to the USA are automatically marked as duty-free.",
-    },
-    {
-      question: "Can I use landed cost without your checkout product?",
-      answer: "Absolutely. Landed Cost is available as a standalone API that can be integrated into any e-commerce platform or custom application.",
-    },
-    {
-      question: "What happens if a shipment is delayed at customs?",
-      answer: "We provide pre-clearance documents and commercial invoices optimized for fast customs processing. If a delay occurs due to duty calculation issues, we work directly with customs to resolve it.",
-    },
+    { question: t("products.landedCost.faq.q1"), answer: t("products.landedCost.faq.a1") },
+    { question: t("products.landedCost.faq.q2"), answer: t("products.landedCost.faq.a2") },
+    { question: t("products.landedCost.faq.q3"), answer: t("products.landedCost.faq.a3") },
+    { question: t("products.landedCost.faq.q4"), answer: t("products.landedCost.faq.a4") },
+    { question: t("products.landedCost.faq.q5"), answer: t("products.landedCost.faq.a5") },
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-gray-900">
       <Header />
-      
+
       <main className="flex-1 pt-16">
         {/* Hero Section */}
         <section className="relative bg-white py-20 md:py-28 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-yellow-50 opacity-60"></div>
-          
+
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6">
-                
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
-                  Calculate landed costs<br />
-                  <span className="text-green-800">with guaranteed accuracy.</span>
+                  {t("products.landedCost.hero.title")}<br />
+                  <span className="text-green-800">{t("products.landedCost.hero.titleHighlight")}</span>
                 </h1>
-                
+
                 <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                  Surprise duty invoices ruin profits and customer trust. Kassongo calculates and guarantees every international charge—duties, taxes, and brokerage fees—so you can ship globally without financial risk. When customs charges more than we quoted, we pay the difference.
+                  {t("products.landedCost.hero.subtitle")}
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button variant="primary" size="lg" href="/tools/duty-calculator" className="shadow-soft-lg transition-all">
-                    <span>Use Duty Calculator</span>
+                    <span>{t("products.landedCost.hero.ctaPrimary")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                   <Button variant="secondary" size="lg" href="/contact">
-                    Book a demo
+                    {t("products.landedCost.hero.ctaSecondary")}
                   </Button>
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="bg-white rounded-3xl p-6 md:p-8 border border-gray-200 shadow-soft-xl space-y-6 relative overflow-hidden">
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-green-50 rounded-full blur-2xl opacity-40"></div>
-                  
-                  <h3 className="font-display font-black text-lg text-gray-950">Landed Cost Breakdown</h3>
-                  
+
+                  <h3 className="font-display font-black text-lg text-gray-950">{t("products.landedCost.breakdown.title")}</h3>
+
                   <div className="space-y-4 text-xs font-semibold text-gray-600">
                     <div className="flex items-center justify-between border-b border-gray-50 pb-2">
-                      <span>Commodity Code (Laptop)</span>
+                      <span>{t("products.landedCost.breakdown.commodityCode")}</span>
                       <span className="font-mono text-gray-900">8471.30</span>
                     </div>
                     <div className="flex items-center justify-between border-b border-gray-50 pb-2">
-                      <span>Customs Value (CIF)</span>
+                      <span>{t("products.landedCost.breakdown.customsValue")}</span>
                       <span className="text-gray-900 font-bold">$1,250.00</span>
                     </div>
-                    
+
                     <div className="space-y-2 pt-2">
-                      <div className="flex items-center justify-between text-yellow-750">
+                      <div className="flex items-center justify-between text-yellow-700">
                         <span className="flex items-center gap-1.5">
                           <span className="w-2 h-2 bg-yellow-500 rounded-full" />
-                          <span>Customs Duty (2%)</span>
+                          <span>{t("products.landedCost.breakdown.duty")}</span>
                         </span>
                         <span>$25.00</span>
                       </div>
                       <div className="flex items-center justify-between text-red-700">
                         <span className="flex items-center gap-1.5">
                           <span className="w-2 h-2 bg-red-500 rounded-full" />
-                          <span>Import VAT (Cameroon 19.25%)</span>
+                          <span>{t("products.landedCost.breakdown.importVat")}</span>
                         </span>
                         <span>$245.44</span>
                       </div>
                       <div className="flex items-center justify-between text-green-800">
                         <span className="flex items-center gap-1.5">
                           <span className="w-2 h-2 bg-green-500 rounded-full" />
-                          <span>CEMAC Regional Levies (1.95%)</span>
+                          <span>{t("products.landedCost.breakdown.regionalLevies")}</span>
                         </span>
                         <span>$24.38</span>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center justify-between border-t border-gray-100 pt-4 bg-gray-50/50 p-3 rounded-xl">
-                      <span className="text-sm font-bold text-gray-900">Total Duties & Taxes</span>
-                      <span className="text-base font-black text-green-905 font-mono">$294.82</span>
+                      <span className="text-sm font-bold text-gray-900">{t("products.landedCost.breakdown.totalDutiesTaxes")}</span>
+                      <span className="text-base font-black text-green-700 font-mono">$294.82</span>
                     </div>
                   </div>
                 </div>
@@ -130,79 +113,73 @@ export default function LandedCostPage() {
         </section>
 
         {/* Benefits Grid */}
-        <section className="bg-gray-55 py-20 px-6 border-y border-gray-200">
+        <section className="bg-green-900 py-20 px-6">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="text-center max-w-2xl mx-auto space-y-3">
-              <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900">Why businesses choose Landed Cost</h2>
-              <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                International shipping should not drain your profits. Every unexpected duty invoice, complaints about surprise fees, and time spent on tax compliance costs money.
+              <h2 className="text-3xl md:text-4xl font-display font-black text-white">{t("products.landedCost.benefits.title")}</h2>
+              <p className="text-green-100 text-sm md:text-base leading-relaxed">
+                {t("products.landedCost.benefits.subtitle")}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Card 1 */}
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <ShieldAlert className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Never absorb extra costs</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  If customs charges more than we calculated, we pay the difference. Your profit margins are completely protected.
+                <h3 className="text-lg font-bold text-white">{t("products.landedCost.benefits.item1Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.landedCost.benefits.item1Desc")}
                 </p>
               </div>
 
-              {/* Card 2 */}
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Percent className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Eliminate surprise fees</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Display the complete landed cost at checkout. Eliminating surprise fees at delivery results in happier customers and fewer returns.
+                <h3 className="text-lg font-bold text-white">{t("products.landedCost.benefits.item2Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.landedCost.benefits.item2Desc")}
                 </p>
               </div>
 
-              {/* Card 3 */}
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <FileText className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">We file taxes, you don't</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  We handle complex compliance schemes like EU IOSS, UK VAT, Australia GST, and Norway VOEC—no need to register or file manually.
+                <h3 className="text-lg font-bold text-white">{t("products.landedCost.benefits.item3Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.landedCost.benefits.item3Desc")}
                 </p>
               </div>
 
-              {/* Card 4 */}
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Scale className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Ship to 200+ countries</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Calculate precise customs duty, local tax, and clearance fees for over 200 countries and territories worldwide.
+                <h3 className="text-lg font-bold text-white">{t("products.landedCost.benefits.item4Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.landedCost.benefits.item4Desc")}
                 </p>
               </div>
 
-              {/* Card 5 */}
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <Calculator className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Free HS classification</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Get accurate HS code classification included at no extra cost when you use our guaranteed landed cost.
+                <h3 className="text-lg font-bold text-white">{t("products.landedCost.benefits.item5Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.landedCost.benefits.item5Desc")}
                 </p>
               </div>
 
-              {/* Card 6 */}
-              <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-soft space-y-4">
-                <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-905">
+              <div className="bg-green-950 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center shadow-soft-lg gap-4">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-400">
                   <BadgeDollarSign className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">Reduce carrier fees</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Save up to 50% on carrier advancement and disbursement fees through our negotiated carrier rates.
+                <h3 className="text-lg font-bold text-white">{t("products.landedCost.benefits.item6Title")}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {t("products.landedCost.benefits.item6Desc")}
                 </p>
               </div>
             </div>
@@ -214,33 +191,21 @@ export default function LandedCostPage() {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-3">
               <h2 className="text-2xl md:text-3xl font-display font-black text-gray-900">
-                From quote to delivery, we have you covered
+                {t("products.landedCost.process.title")}
               </h2>
             </div>
-            
+
             <div className="space-y-8">
               {[
-                { 
-                  step: "01", 
-                  title: "Calculate at checkout automatically", 
-                  desc: "When a customer enters a shipping destination, Landed Cost instantly calculates duties, taxes, and carrier fees in real time. The shopper sees the complete cost before they pay—no surprises, no hidden charges."
-                },
-                { 
-                  step: "02", 
-                  title: "Guarantee the calculation", 
-                  desc: "We cover any discrepancy between what we calculated and what customs invoices. Your finance team doesn't have to audit carrier bills or absorb unexpected fees."
-                },
-                { 
-                  step: "03", 
-                  title: "Frictionless customs clearance", 
-                  desc: "Shipments clear customs faster since all duties and taxes are prepaid. No packages are held at the border waiting for client invoice payments."
-                }
+                { step: "01", title: t("products.landedCost.process.step1Title"), desc: t("products.landedCost.process.step1Desc") },
+                { step: "02", title: t("products.landedCost.process.step2Title"), desc: t("products.landedCost.process.step2Desc") },
+                { step: "03", title: t("products.landedCost.process.step3Title"), desc: t("products.landedCost.process.step3Desc") }
               ].map((item) => (
                 <div key={item.step} className="flex gap-6 border-b border-gray-50 pb-6 last:border-0">
                   <span className="text-3xl font-display font-black text-green-800 tracking-tight shrink-0">{item.step}</span>
                   <div>
                     <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
-                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
+                    <p className="text-sm text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -248,17 +213,12 @@ export default function LandedCostPage() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
         <TestimonialSlider />
-
-        {/* FAQ Section */}
         <FAQComponent
-          title="Landed Cost FAQs"
-          subtitle="Everything you need to know about duty and tax calculations"
+          title={t("products.landedCost.faq.title")}
+          subtitle={t("products.landedCost.faq.subtitle")}
           faqs={faqs}
         />
-
-        {/* Network Countries Grid */}
         <NetworkCountriesGrid />
       </main>
 
