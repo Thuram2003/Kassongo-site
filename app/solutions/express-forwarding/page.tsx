@@ -51,49 +51,60 @@ export default function ExpressForwardingPage() {
       
       <main className="flex-1 pt-16">
         {/* Hero Section */}
-        <section className="relative bg-white py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-yellow-50 opacity-60"></div>
+<section className="relative bg-white py-16 md:py-24 lg:py-28 overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-yellow-50 opacity-60"></div>
+  
+  {/* Main Container */}
+  <div className="max-w-7xl mx-auto relative z-10 px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      {/* Text Content: Takes 6 columns on desktop, full width on mobile */}
+      <div className="space-y-6 lg:col-span-6 z-20">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
+          {t("solutions.expressForwarding.hero.title")}<br />
+          <span className="text-green-800">{t("solutions.expressForwarding.hero.titleHighlight")}</span>
+        </h1>
+        
+        <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+          {t("solutions.expressForwarding.hero.subtitle")}
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <Button variant="primary" size="lg" href="/tools/duty-calculator" className="shadow-soft-lg transition-all">
+            <span>{t("solutions.expressForwarding.hero.ctaPrimary")}</span>
+            <ArrowRight className="w-4 h-4" />
+          </Button>
+          <Button variant="secondary" size="lg" href="/contact">
+            {t("solutions.expressForwarding.hero.ctaSecondary")}
+          </Button>
+        </div>
+      </div>
+      
+      {/* Mobile Image: Displays normally on small screens inside the grid */}
+      <div className="block lg:hidden w-full">
+        <div className="relative w-full h-[300px] overflow-hidden rounded-2xl shadow-soft-xl border border-gray-100">
+          <img
+            src="/solutions/image3.svg"
+            alt={t("solutions.secureWarehousing.hero.imageAlt")}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
 
-          {/* Text Content Container */}
-          <div className="max-w-7xl mx-auto relative z-10 px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    </div>
+  </div>
 
-              {/* Text Content (Takes 6 columns on the left) */}
-              <div className="space-y-6 lg:col-span-6 z-20">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black leading-[0.95] tracking-tight text-gray-900">
-                  {t("solutions.expressForwarding.hero.title")}<br />
-                  <span className="text-green-800">{t("solutions.expressForwarding.hero.titleHighlight")}</span>
-                </h1>
-
-                <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                  {t("solutions.expressForwarding.hero.subtitle")}
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                  <Button variant="primary" size="lg" href="/tools/duty-calculator" className="shadow-soft-lg transition-all">
-                    <span>{t("solutions.expressForwarding.hero.ctaPrimary")}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
-                  <Button variant="secondary" size="lg" href="/contact">
-                    {t("solutions.expressForwarding.hero.ctaSecondary")}
-                  </Button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* Image Section: Absolute positioned to cover the entire right half up to the screen border */}
-          <div className="mt-12 lg:mt-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 flex items-center justify-center">
-            <div className="relative w-full h-full min-h-[350px] lg:min-h-full overflow-hidden lg:rounded-none lg:[clip-path:polygon(20%_0%,100%_0%,100%_100%,0%_100%)] shadow-soft-xl lg:shadow-none border border-gray-100 lg:border-none">
-              <img
-                src="/solutions/image3.svg"
-                alt={t("solutions.secureWarehousing.hero.imageAlt")}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
+  {/* Desktop Image: Absolute positioned right-side bleed with diagonal clip-path (Hidden on mobile) */}
+  <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+    <div className="relative w-full h-full [clip-path:polygon(15%_0%,100%_0%,100%_100%,0%_100%)]">
+      <img
+        src="/solutions/image3.svg"
+        alt={t("solutions.secureWarehousing.hero.imageAlt")}
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</section>
 
 {/* Features / Benefits */}
         <section className="bg-green-900 py-20 px-6">
