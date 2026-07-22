@@ -83,7 +83,7 @@ export default function AssistedSourcingPage() {
                 </div>
               </div>
               
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex items-center justify-center ">
                 <div className="relative w-full overflow-hidden rounded-2xl shadow-soft-xl border border-gray-100">
                   <img
                     src="/solutions/image1.webp"
