@@ -89,7 +89,7 @@ export default function AssistedSourcingPage() {
       <div className="block lg:hidden w-full">
         <div className="relative w-full h-[300px] overflow-hidden rounded-2xl shadow-soft-xl border border-gray-100">
           <img
-            src="/solutions/image1.webp"
+            src="/solutions/image2.webp"
             alt={t("solutions.secureWarehousing.hero.imageAlt")}
             className="w-full h-full object-cover"
           />
@@ -103,7 +103,7 @@ export default function AssistedSourcingPage() {
   <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
     <div className="relative w-full h-full [clip-path:polygon(15%_0%,100%_0%,100%_100%,0%_100%)]">
       <img
-        src="/solutions/image1.webp"
+        src="/solutions/image2.webp"
         alt={t("solutions.secureWarehousing.hero.imageAlt")}
         className="w-full h-full object-cover"
       />
