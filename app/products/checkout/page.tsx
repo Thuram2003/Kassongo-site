@@ -123,8 +123,6 @@ export default function CheckoutPage() {
           </div>
         </section>
 
-        <PartnerMarquee />
-
         {/* Features Grid */}
         <section className="bg-green-900 py-20 px-6">
           <div className="max-w-7xl mx-auto space-y-16">
