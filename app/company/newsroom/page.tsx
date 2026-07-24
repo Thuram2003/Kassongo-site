@@ -113,8 +113,8 @@ export default function NewsroomPage() {
               </p>
             </div>
             
-            <Button variant="outline" href="/contact" className="flex items-center gap-1 text-sm font-bold shrink-0">
-              <span>Request Media Kit</span>
+            <Button variant="outline" href="/company/media-kit" className="flex items-center gap-1 text-sm font-bold shrink-0">
+              <span>Download Media Kit</span>
               <ExternalLink className="w-4 h-4" />
             </Button>
           </div>

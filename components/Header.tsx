@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ChevronDown, ShoppingCart, Package, Search, Plug, Truck, Warehouse, Users, Box, Building2, Phone, Newspaper, Briefcase, Calculator } from "lucide-react";
+import { Menu, X, ChevronDown, ShoppingCart, Package, Search, Plug, Truck, Warehouse, Users, Box, Building2, Phone, Newspaper, Briefcase, Calculator, FileImage, Sparkles } from "lucide-react";
 import Button from "./Button";
 import StripeNavMenu, { DropdownItem, NavSection } from "./DropdownMenu";
 import { useTranslation } from "../lib/i18n/LanguageContext";
@@ -91,6 +91,13 @@ export default function Header() {
       colorBg: "bg-purple-100/80 text-purple-700 group-hover:bg-purple-600 group-hover:text-white",
       hoverBorder: "hover:border-purple-200/80 hover:bg-purple-50/50",
     },
+    {
+      label: t("footer.links.kassongoCapital") || "Kassongo Capital",
+      href: "/products/kassongo-capital",
+      icon: <Sparkles className="w-4 h-4" />,
+      colorBg: "bg-teal-100/80 text-teal-700 group-hover:bg-teal-600 group-hover:text-white",
+      hoverBorder: "hover:border-teal-200/80 hover:bg-teal-50/50",
+    },
   ];
 
   const solutionsItems: DropdownItem[] = [
@@ -150,11 +157,18 @@ export default function Header() {
       hoverBorder: "hover:border-blue-200/80 hover:bg-blue-50/50",
     },
     {
+      label: "Media Kit",
+      href: "/company/media-kit",
+      icon: <FileImage className="w-4 h-4" />,
+      colorBg: "bg-amber-100/80 text-amber-700 group-hover:bg-amber-600 group-hover:text-white",
+      hoverBorder: "hover:border-amber-200/80 hover:bg-amber-50/50",
+    },
+    {
       label: t("common.contactUs") || "Contact Us",
       href: "/contact",
       icon: <Phone className="w-4 h-4" />,
-      colorBg: "bg-emerald-100/80 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white",
-      hoverBorder: "hover:border-emerald-200/80 hover:bg-emerald-50/50",
+      colorBg: "bg-cyan-100/80 text-cyan-700 group-hover:bg-cyan-600 group-hover:text-white",
+      hoverBorder: "hover:border-cyan-200/80 hover:bg-cyan-50/50",
     },
     {
       label: t("footer.links.careers") || "Careers",
